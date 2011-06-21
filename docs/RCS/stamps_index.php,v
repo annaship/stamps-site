@@ -1,0 +1,114 @@
+head	1.3;
+access;
+symbols;
+locks
+	ashipunova:1.3; strict;
+comment	@# @;
+
+
+1.3
+date	2011.06.20.22.33.29;	author ashipunova;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2011.06.20.20.19.12;	author ashipunova;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2011.06.20.19.53.45;	author ashipunova;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@*** empty log message ***
+@
+text
+@<?php
+	include("beginning.php");
+?>
+			<div id="sub-header">
+				<div id="left-part">
+					<img class="stamps-logo" src="/images/STAMPSlogo2.jpg" alt="STAMPS logo">
+				</div>
+				<div id="right-part">
+					<h2>August 3 – August 13, 2011</h2>
+				
+					<p>Course directors Mitchell Sogin and David Mark Welch</p>
+					
+					<p><a href="stamps_calendar.php"> Schedule</a></br> 
+						 Information for students </br> 
+						 Information for faculty</p>
+					
+				</div>
+				<p></p>
+			</div>
+			
+	<p>		Deep DNA sequencing using massively-parallel, next-generation technology has enabled nearly comprehensive environmental surveys that can describe the different kinds of microbes in a community and their relative abundance. These descriptions of richness and evenness make possible estimates of microbial diversity, but the size of the required data sets pose enormous computational challenges. The rapidly expanding flow of information from next generation DNA sequencing platforms has fueled healthy debate about best practices for data analysis while at the same time building a user demand for tools that can address important ecological questions. The STAMPS course will promote dialogue and the exchange of ideas between experts in analysis of metagenomic data and offer interdisciplinary bioinformatic and statistical training to practitioners of molecular microbial ecology and genomics.
+</p><p>
+		Topics to be covered include but are not limited to next-generation strategies for analysis of microbial communities; acquisition and organization of next generation sequence data; principles of quality control of sequence data; the theory of cluster and rarefaction analyses; taxonomic assignments for high-throughput data; statistical models for estimating microbial diversity; microbial community comparison methodology and metrics; and analysis of shotgun metagenomic data. The lectures will be augmented by a computer laboratory where students will have the opportunity to use state of the art facilities to test theoretical concepts described in the lectures series. Guided by authors of ARB, CatchAll, Esprit, Mothur, Pyronoise, RDP, Silva, UClust, and Pyronoise for cluster analyses; mother, QIIME, Unifrac, and VAMPS for community analysis; and METAREP and MG-RAST for shotgun metagenomics analysis, participants in the workshop will have the opportunity to compare different analysis techniques for molecular data.
+	</p><p>
+
+		The course is designed for established investigators, postdoctoral fellows and advanced graduate students from diverse biological fields. The Workshop Participants will also be given priority for acceptance into the MBL’s Workshop in Molecular Evolution that will meet the preceding week. This option will provide an opportunity to develop a stronger conceptual framework for understanding the basis of analytical tools in the STAMPS workshop.
+			</p>
+<?php
+	include("end.php");
+?>@
+
+
+1.2
+log
+@*** empty log message ***
+@
+text
+@d1 3
+a3 18
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link rel="stylesheet" type="text/css" href="stamps_style.css" />
+
+</head>
+
+<body>
+	<div id="wrap">
+		<div id="header">
+			<img class="header_top" src="/images/jbpc_header_top6.jpg" alt="VAMPS Header -Top">
+			<img class="dna" src="/images/DNA_header_trans.gif" alt="dna">
+		</div>
+		<div id="nav">nav</div>
+		<div id="sidebar">sidebar</div>
+		<div id="main">
+d13 1
+a13 1
+					<p>Schedule </br> 
+d28 3
+a30 5
+		</div>
+		<div id="footer">footer</div>
+	</div>
+</body>
+</html>	@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d6 1
+a6 1
+<link rel="stylesheet" type="text/css" href="style.css" />
+d18 26
+a43 1
+		<div id="main">main</div>
+@

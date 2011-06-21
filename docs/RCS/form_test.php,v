@@ -1,0 +1,222 @@
+head	1.8;
+access;
+symbols;
+locks
+	ashipunova:1.8; strict;
+comment	@# @;
+
+
+1.8
+date	2011.06.20.16.51.21;	author ashipunova;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2011.06.20.16.32.08;	author ashipunova;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2011.06.20.16.28.59;	author ashipunova;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2011.06.20.16.13.55;	author ashipunova;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2011.06.20.16.02.29;	author ashipunova;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2011.06.20.15.20.27;	author ashipunova;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2011.06.20.15.11.42;	author ashipunova;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2011.06.20.15.10.35;	author ashipunova;	state Exp;
+branches;
+next	;
+
+
+desc
+@works
+@
+
+
+1.8
+log
+@move form into separate file
+@
+text
+@<!-- $("input").autocomplete({
+  source: ["a", "b", "c"]
+}); -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml'>
+   <head >
+      <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+			<link rel="stylesheet" type="text/css" href="style.css" />
+      <title >Form Page: sampleform</title>
+   </head>
+<body>
+<h1>Sample form page</h1>
+
+<?php include("metadata_form.php")
+?>
+
+
+</body>
+@
+
+
+1.7
+log
+@move array into separate_file
+@
+text
+@d15 1
+a15 4
+<form action="my_form.php" method="post">
+ 
+<?php 
+include("arrays.php");
+a17 33
+Environment:
+<select name="environment">
+   <option value="">Select...</option>
+   <option value="air">air</option>
+   <option value="surface">surface</option>
+   <option value="water">water</option>
+</select>
+
+Section:
+<select name="section">
+   <option value="">Select...</option>
+   <option value="building">building</option>
+   <option value="source">nucleic acid sequence source</option>
+   <option value="vehicle">vehicle</option>
+</select>
+
+<!-- Which is your favorite movie?
+<input type="text" name="name1" maxlength="50"> -->
+
+Description:
+<select name="description">
+  <option value="">Select...</option>
+<?php 
+	foreach($description_words as $word) {             
+  	echo "<option value=\"$word\">$word</option>\n";
+	}
+?>
+</select>
+
+<input type="submit" name="formSubmit" value="Submit">
+</form>
+
+
+@
+
+
+1.6
+log
+@works
+todo: form on the same page
+@
+text
+@d18 1
+a18 2
+$description_words = array(
+'2-dimensional', '3-dimensional', 'administered', 'adverse', 'afflicted', 'air', 'aircraft', 'airetite', 'airplane', 'aisles', 'all', 'allowed', 'alright', 'amount', 'animals', 'area', 'associated', 'atmospheric', 'attached', 'available', 'average', 'bacteria', 'bedroom', 'benzene', 'better', 'between', 'building', 'carpet', 'category', 'ceiling', 'cfm', 'chemical', 'cigarettes', 'circulated', 'cleaned', 'cleaning', 'closed', 'coliform', 'collect', 'collected', 'collection', 'commercial', 'compounds', 'concentration', 'construction', 'cooling', 'countertop', 'covered', 'cracks', 'cultivation-based', 'cycle', 'daily', 'day', 'defined', 'defines', 'depending', 'description', 'difference', 'dissolved', 'distance', 'door', 'duration', 'during', 'dust', 'duty', 'each', 'effects', 'efficiency', 'either', 'electric', 'endotoxins', 'energy', 'engine', 'environement', 'environment', 'environmental', 'equipment', 'ergosetrol', 'ether', 'ethylbenzene', 'euclidean', 'exact', 'example', 'experiment', 'exposed', 'expressed', 'extent', 'fan', 'fast', 'fecal', 'fiber', 'field', 'filter', 'flights', 'floor', 'flooring', 'flowing', 'foot', 'formaldehyde', 'fresh', 'from', 'fuel', 'fungal', 'garage', 'gas', 'gasoline', 'gathered', 'general', 'generally', 'grades', 'hard', 'health', 'height', 'heterotrophs', 'highway', 'hour', 'house', 'htm', 'hvac', 'identifier', 'include', 'indoor', 'informative', 'initial', 'insecticide', 'inside', 'installation', 'installment', 'instance', 'intensity', 'interest', 'interval', 'into', 'journeys', 'lamp', 'leaking', 'level', 'light', 'list', 'lit', 'load', 'located', 'location', 'lower', 'lpg', 'luminous', 'many', 'mass', 'material', 'matter', 'maximum', 'means', 'measure', 'measured', 'mechanical', 'metal', 'meters', 'methyl', 'mica', 'microbes', 'mileage', 'million', 'mixed', 'model', 'months', 'more', 'motion', 'moving', 'much', 'multiple', 'nicotine', 'nm', 'no', 'no2', 'no3', 'normally', 'not', 'noticed', 'number', 'o2', 'object', 'occupants', 'occupied', 'occupies', 'occupy', 'occurs', 'often', 'open', 'org', 'organic', 'outdoor', 'outside', 'ozone', 'particle', 'particular', 'particulate', 'parts', 'pass', 'passage', 'passed', 'passenger', 'people', 'percent', 'period', 'person', 'personelle', 'planotx', 'plants', 'plastic', 'plumbing', 'pool', 'power', 'precipitation', 'presence', 'present', 'pressure', 'princeton', 'produced', 'professionals', 'provides', 'rate', 'ratio', 'receptacle', 'released', 'replaced', 'replaces', 'replica', 'room', 'route', 'sample', 'sampling', 'schoolchildren', 'seasonal', 'seat', 'seer', 'setonresourcecenter', 'sf6', 'shortest', 'since', 'single', 'site', 'size', 'smokers', 'solid', 'sound', 'source', 'space', 'specific', 'specify', 'spends', 'spent', 'square', 'stage', 'status', 'stop', 'strategies', 'substance', 'such', 'summer-grade', 'surface', 'system', 'temperature', 'terms', 'tert-butyl', 'test', 'threshold', 'time', 'to', 'total', 'toulene', 'traces', 'transfer', 'traversed', 'treatment', 'true', 'truncated', 'type', 'typical', 'typically', 'ultrafine', 'units', 'use', 'usually', 'vapor', 'vehicle', 'volatile', 'walls', 'water', 'watts', 'whether', 'wikipedia', 'window', 'winter-grade', 'wood', 'workflow', 'www', 'xylene', 'year');
+@
+
+
+1.5
+log
+@add empty desc
+@
+text
+@d18 1
+a18 1
+$description_words = array('',
+d43 1
+@
+
+
+1.4
+log
+@section, env, description
+@
+text
+@d18 1
+a18 1
+$description_words = array(
+@
+
+
+1.3
+log
+@works
+todo table
+@
+text
+@d9 1
+d17 4
+a20 2
+Which is your favorite movie?
+<input type="text" name="name1" maxlength="50">
+d22 1
+a22 1
+Please choose an environment:
+d30 20
+a49 1
+ 
+@
+
+
+1.2
+log
+@get data
+@
+text
+@a13 10
+<?php
+	//   if($_POST['formSubmit'] == "Submit")
+	//   {
+	// print("Submit!");
+	//     $varMovie = $_POST['name1'];
+	// 	var_dump($varMovie);
+	//   }
+?>
+
+
+d18 9
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d15 6
+a20 6
+  if($_POST['formSubmit'] == "Submit")
+  {
+	print("Submit!");
+    $varMovie = $_POST['name1'];
+		var_dump($varMovie);
+  }
+d24 1
+a24 1
+<form action="form_test.php" method="post">
+@

@@ -1,0 +1,397 @@
+head	1.6;
+access;
+symbols;
+locks
+	ashipunova:1.6; strict;
+comment	@# @;
+
+
+1.6
+date	2011.06.20.16.35.36;	author ashipunova;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2011.06.20.16.29.14;	author ashipunova;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2011.06.20.16.14.04;	author ashipunova;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2011.06.20.16.07.12;	author ashipunova;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2011.06.20.16.02.37;	author ashipunova;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2011.06.20.15.27.21;	author ashipunova;	state Exp;
+branches;
+next	;
+
+
+desc
+@works
+table
+todo add more vars
+@
+
+
+1.6
+log
+@add form
+@
+text
+@<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+
+<body>
+
+<div id="page">
+
+    <div id="headingSection">
+    	<h1>Indoor air metadata</h1>
+			<form action="my_form.php" method="post">
+
+			<?php 
+			include("my_arrays.php");
+			?>
+
+			Environment:
+			<select name="environment">
+			   <option value="">Select...</option>
+			   <option value="air">air</option>
+			   <option value="surface">surface</option>
+			   <option value="water">water</option>
+			</select>
+
+			Section:
+			<select name="section">
+			   <option value="">Select...</option>
+			   <option value="building">building</option>
+			   <option value="source">nucleic acid sequence source</option>
+			   <option value="vehicle">vehicle</option>
+			</select>
+
+			<!-- Which is your favorite movie?
+			<input type="text" name="name1" maxlength="50"> -->
+
+			Description:
+			<select name="description">
+			  <option value="">Select...</option>
+			<?php 
+				foreach($description_words as $word) {             
+			  	echo "<option value=\"$word\">$word</option>\n";
+				}
+			?>
+			</select>
+
+			<input type="submit" name="formSubmit" value="Submit">
+			</form>
+    </div>
+<?php
+if($_POST['formSubmit'] == "Submit")
+{
+	// $varMovie = $_POST['name1'];
+	$environment = $_POST['environment'];
+	$section 		 = $_POST['section'];
+	$description = $_POST['description'];
+	
+}
+
+ini_set('display_errors', 1);
+ini_set('log_errors', 1);
+ini_set('error_log', dirname(__FILE__) . '/error_log.txt');
+error_reporting(E_ALL);
+
+
+// $a = 'http://query.yahooapis.com/v1/public/yql?q=SELECT%20*%20FROM%20csv%20WHERE%20url%3D%22https%3A%2F%2Fspreadsheets0.google.com%2Fspreadsheet%2Fpub%3Fhl%3Den_US%26hl%3Den_US%26key%3D0AucLmbn95V37dHh3NFAwTzEzSWplMUpTUW5salgtRkE%26single%3Dtrue%26gid%3D0%26output%3Dcsv%22%20and%20col1%20%3D%20%22building%22&diagnostics=true';
+
+// $a = 'http://query.yahooapis.com/v1/public/yql?q=%20SELECT%20*%20FROM%20csv%20WHERE%20url%3D%22https%3A%2F%2Fspreadsheets0.google.com%2Fspreadsheet%2Fpub%3Fhl%3Den_US%26hl%3Den_US%26key%3D0AucLmbn95V37dHh3NFAwTzEzSWplMUpTUW5salgtRkE%26single%3Dtrue%26gid%3D0%26output%3Dcsv%22%20and%20col0%20like%20%22%25'.$environment.'%25%22&diagnostics=true';
+
+// $a = 'http://query.yahooapis.com/v1/public/yql?q=%20SELECT%20*%20FROM%20csv%20WHERE%20url%3D%22https%3A%2F%2Fspreadsheets0.google.com%2Fspreadsheet%2Fpub%3Fhl%3Den_US%26hl%3Den_US%26key%3D0AucLmbn95V37dHh3NFAwTzEzSWplMUpTUW5salgtRkE%26single%3Dtrue%26gid%3D0%26output%3Dcsv%22%20and%20col0%20like%20%22%25'.$environment.'%25%22%20and%20col1%20like%20%22%25'.$section.'%25%22&diagnostics=true';
+
+$rest_query = 'http://query.yahooapis.com/v1/public/yql?q=%20SELECT%20*%20FROM%20csv%20WHERE%20url%3D%22https%3A%2F%2Fspreadsheets0.google.com%2Fspreadsheet%2Fpub%3Fhl%3Den_US%26hl%3Den_US%26key%3D0AucLmbn95V37dHh3NFAwTzEzSWplMUpTUW5salgtRkE%26single%3Dtrue%26gid%3D0%26output%3Dcsv%22%20and%20col0%20like%20%22%25'.$environment.'%25%22%20and%20col1%20like%20%22%25'.$section.'%25%22%20and%20col5%20like%20%22%25'.$description.'%25%22&diagnostics=true';
+
+// var_dump($rest_query);
+
+$xml = simplexml_load_file($rest_query);
+
+$results = $xml->results;
+
+print("<p>Environment: ".$environment."<br/>
+Section: ".$section."<br/>
+Description: ".$description."</p>");
+
+// print_r($results);
+
+echo "<table id='res_table'>";
+echo "<tr><th>environment</th> <th>section</th> <th>structured comment</th> <th>item</th> <th>units</th> <th>description</th> </tr>";
+foreach ($results -> row as $row) {
+	echo "<tr>";
+	foreach ($row as $col_n => $col) {
+		
+		// echo "<p>START".$col_n;
+		// print($col);
+		echo "<td>$col</td>";
+	}
+	echo "</tr>";
+}
+echo "</table>";
+
+
+// foreach ($results->Release as $r) {
+//   echo '<p>';
+//   echo '<a href="' . $r['url'] . '">' . $r['title'] . 
+//     '</a> (' . $r['releaseYear'] . ') - ';  
+//   echo '<a href="' . $r->Artist['url'] . '">' . $r->Artist['name'] . 
+//     '</a> <br/>'; 
+//   echo 'Current chart position: ' . $r->ItemInfo->ChartPosition['this'] . 
+//     ' / Last chart position: ' . $r->ItemInfo->ChartPosition['last']; 
+//   echo '</p>';
+// }  
+?>
+</body>
+</html>@
+
+
+1.5
+log
+@works
+todo: form on the same page
+@
+text
+@d16 37
+a52 6
+        <!-- <a class="button expand" href="#">Expand</a> -->
+				<!-- <form id="myForm" action="comment.php" method="post"> 
+				    Name: <input type="text" name="name" /> 
+				    Comment: <textarea name="comment"></textarea> 
+				    <input type="submit" value="Submit Comment" /> 
+				</form> -->
+@
+
+
+1.4
+log
+@form in separate place
+@
+text
+@d45 1
+a45 1
+$a = 'http://query.yahooapis.com/v1/public/yql?q=%20SELECT%20*%20FROM%20csv%20WHERE%20url%3D%22https%3A%2F%2Fspreadsheets0.google.com%2Fspreadsheet%2Fpub%3Fhl%3Den_US%26hl%3Den_US%26key%3D0AucLmbn95V37dHh3NFAwTzEzSWplMUpTUW5salgtRkE%26single%3Dtrue%26gid%3D0%26output%3Dcsv%22%20and%20col0%20like%20%22%25'.$environment.'%25%22%20and%20col1%20like%20%22%25'.$section.'%25%22%20and%20col5%20like%20%22%25'.$description.'%25%22&diagnostics=true';
+d47 1
+a47 1
+// var_dump($a);
+d49 1
+a49 1
+$xml = simplexml_load_file($a);
+@
+
+
+1.3
+log
+@works from one place,
+todo separate
+@
+text
+@d16 6
+a21 38
+			<form action="my_form.php" method="post">
+
+			<?php 
+			$description_words = array('',
+			'2-dimensional', '3-dimensional', 'administered', 'adverse', 'afflicted', 'air', 'aircraft', 'airetite', 'airplane', 'aisles', 'all', 'allowed', 'alright', 'amount', 'animals', 'area', 'associated', 'atmospheric', 'attached', 'available', 'average', 'bacteria', 'bedroom', 'benzene', 'better', 'between', 'building', 'carpet', 'category', 'ceiling', 'cfm', 'chemical', 'cigarettes', 'circulated', 'cleaned', 'cleaning', 'closed', 'coliform', 'collect', 'collected', 'collection', 'commercial', 'compounds', 'concentration', 'construction', 'cooling', 'countertop', 'covered', 'cracks', 'cultivation-based', 'cycle', 'daily', 'day', 'defined', 'defines', 'depending', 'description', 'difference', 'dissolved', 'distance', 'door', 'duration', 'during', 'dust', 'duty', 'each', 'effects', 'efficiency', 'either', 'electric', 'endotoxins', 'energy', 'engine', 'environement', 'environment', 'environmental', 'equipment', 'ergosetrol', 'ether', 'ethylbenzene', 'euclidean', 'exact', 'example', 'experiment', 'exposed', 'expressed', 'extent', 'fan', 'fast', 'fecal', 'fiber', 'field', 'filter', 'flights', 'floor', 'flooring', 'flowing', 'foot', 'formaldehyde', 'fresh', 'from', 'fuel', 'fungal', 'garage', 'gas', 'gasoline', 'gathered', 'general', 'generally', 'grades', 'hard', 'health', 'height', 'heterotrophs', 'highway', 'hour', 'house', 'htm', 'hvac', 'identifier', 'include', 'indoor', 'informative', 'initial', 'insecticide', 'inside', 'installation', 'installment', 'instance', 'intensity', 'interest', 'interval', 'into', 'journeys', 'lamp', 'leaking', 'level', 'light', 'list', 'lit', 'load', 'located', 'location', 'lower', 'lpg', 'luminous', 'many', 'mass', 'material', 'matter', 'maximum', 'means', 'measure', 'measured', 'mechanical', 'metal', 'meters', 'methyl', 'mica', 'microbes', 'mileage', 'million', 'mixed', 'model', 'months', 'more', 'motion', 'moving', 'much', 'multiple', 'nicotine', 'nm', 'no', 'no2', 'no3', 'normally', 'not', 'noticed', 'number', 'o2', 'object', 'occupants', 'occupied', 'occupies', 'occupy', 'occurs', 'often', 'open', 'org', 'organic', 'outdoor', 'outside', 'ozone', 'particle', 'particular', 'particulate', 'parts', 'pass', 'passage', 'passed', 'passenger', 'people', 'percent', 'period', 'person', 'personelle', 'planotx', 'plants', 'plastic', 'plumbing', 'pool', 'power', 'precipitation', 'presence', 'present', 'pressure', 'princeton', 'produced', 'professionals', 'provides', 'rate', 'ratio', 'receptacle', 'released', 'replaced', 'replaces', 'replica', 'room', 'route', 'sample', 'sampling', 'schoolchildren', 'seasonal', 'seat', 'seer', 'setonresourcecenter', 'sf6', 'shortest', 'since', 'single', 'site', 'size', 'smokers', 'solid', 'sound', 'source', 'space', 'specific', 'specify', 'spends', 'spent', 'square', 'stage', 'status', 'stop', 'strategies', 'substance', 'such', 'summer-grade', 'surface', 'system', 'temperature', 'terms', 'tert-butyl', 'test', 'threshold', 'time', 'to', 'total', 'toulene', 'traces', 'transfer', 'traversed', 'treatment', 'true', 'truncated', 'type', 'typical', 'typically', 'ultrafine', 'units', 'use', 'usually', 'vapor', 'vehicle', 'volatile', 'walls', 'water', 'watts', 'whether', 'wikipedia', 'window', 'winter-grade', 'wood', 'workflow', 'www', 'xylene', 'year');
+			?>
+
+			Environment:
+			<select name="environment">
+			   <option value="">Select...</option>
+			   <option value="air">air</option>
+			   <option value="surface">surface</option>
+			   <option value="water">water</option>
+			</select>
+
+			Section:
+			<select name="section">
+			   <option value="">Select...</option>
+			   <option value="building">building</option>
+			   <option value="source">nucleic acid sequence source</option>
+			   <option value="vehicle">vehicle</option>
+			</select>
+
+			<!-- Which is your favorite movie?
+			<input type="text" name="name1" maxlength="50"> -->
+
+			Description:
+			<select name="description">
+			<?php 
+				foreach($description_words as $word) {             
+			  	echo "<option value=\"$word\">$word</option>\n";
+				}
+			?>
+			</select>
+
+			<input type="submit" name="formSubmit" value="Submit">
+			</form>
+
+a23 5
+ini_set('display_errors', 1);
+ini_set('log_errors', 1);
+ini_set('error_log', dirname(__FILE__) . '/error_log.txt');
+error_reporting(E_ALL);
+
+d31 7
+d45 1
+a45 2
+// if ($environment || $section || $description) {
+	$a = 'http://query.yahooapis.com/v1/public/yql?q=%20SELECT%20*%20FROM%20csv%20WHERE%20url%3D%22https%3A%2F%2Fspreadsheets0.google.com%2Fspreadsheet%2Fpub%3Fhl%3Den_US%26hl%3Den_US%26key%3D0AucLmbn95V37dHh3NFAwTzEzSWplMUpTUW5salgtRkE%26single%3Dtrue%26gid%3D0%26output%3Dcsv%22%20and%20col0%20like%20%22%25'.$environment.'%25%22%20and%20col1%20like%20%22%25'.$section.'%25%22%20and%20col5%20like%20%22%25'.$description.'%25%22&diagnostics=true';
+d47 1
+a47 1
+	// var_dump($a);
+d49 1
+a49 1
+	$xml = simplexml_load_file($a);
+d51 1
+a51 2
+	echo '<h2>My data</h2>';
+	$results = $xml->results;
+d53 3
+a55 3
+	print("<p>Environment: ".$environment."<br/>
+	Section: ".$section."<br/>
+	Description: ".$description."</p>");
+d57 1
+a57 1
+	// print_r($results);
+d59 5
+a63 5
+	echo "<table id='res_table'>";
+	echo "<tr><th>environment</th> <th>section</th> <th>structured comment</th> <th>item</th> <th>units</th> <th>description</th> </tr>";
+	foreach ($results -> row as $row) {
+		echo "<tr>";
+		foreach ($row as $col_n => $col) {
+d65 3
+a67 5
+			// echo "<p>START".$col_n;
+			// print($col);
+			echo "<td>$col</td>";
+		}
+		echo "</tr>";
+d69 1
+a69 1
+	echo "</table>";
+d71 2
+@
+
+
+1.2
+log
+@section, env, description
+@
+text
+@d16 38
+a53 6
+        <!-- <a class="button expand" href="#">Expand</a> -->
+				<!-- <form id="myForm" action="comment.php" method="post"> 
+				    Name: <input type="text" name="name" /> 
+				    Comment: <textarea name="comment"></textarea> 
+				    <input type="submit" value="Submit Comment" /> 
+				</form> -->
+d56 5
+a67 7
+}
+
+ini_set('display_errors', 1);
+ini_set('log_errors', 1);
+ini_set('error_log', dirname(__FILE__) . '/error_log.txt');
+error_reporting(E_ALL);
+
+d73 1
+a73 1
+$a = 'http://query.yahooapis.com/v1/public/yql?q=%20SELECT%20*%20FROM%20csv%20WHERE%20url%3D%22https%3A%2F%2Fspreadsheets0.google.com%2Fspreadsheet%2Fpub%3Fhl%3Den_US%26hl%3Den_US%26key%3D0AucLmbn95V37dHh3NFAwTzEzSWplMUpTUW5salgtRkE%26single%3Dtrue%26gid%3D0%26output%3Dcsv%22%20and%20col0%20like%20%22%25'.$environment.'%25%22%20and%20col1%20like%20%22%25'.$section.'%25%22&diagnostics=true';
+d75 2
+a76 1
+$a = 'http://query.yahooapis.com/v1/public/yql?q=%20SELECT%20*%20FROM%20csv%20WHERE%20url%3D%22https%3A%2F%2Fspreadsheets0.google.com%2Fspreadsheet%2Fpub%3Fhl%3Den_US%26hl%3Den_US%26key%3D0AucLmbn95V37dHh3NFAwTzEzSWplMUpTUW5salgtRkE%26single%3Dtrue%26gid%3D0%26output%3Dcsv%22%20and%20col0%20like%20%22%25'.$environment.'%25%22%20and%20col1%20like%20%22%25'.$section.'%25%22%20and%20col5%20like%20%22%25'.$description.'%25%22&diagnostics=true';
+d78 1
+a78 1
+// var_dump($a);
+d80 1
+a80 1
+$xml = simplexml_load_file($a);
+d82 2
+a83 2
+echo '<h2>My data</h2>';
+$results = $xml->results;
+d85 3
+a87 3
+print("<p>Environment: ".$environment."<br/>
+Section: ".$section."<br/>
+Description: ".$description."</p>");
+d89 1
+a89 1
+// print_r($results);
+d91 5
+a95 5
+echo "<table id='res_table'>";
+echo "<tr><th>environment</th> <th>section</th> <th>structured comment</th> <th>item</th> <th>units</th> <th>description</th> </tr>";
+foreach ($results -> row as $row) {
+	echo "<tr>";
+	foreach ($row as $col_n => $col) {
+d97 5
+a101 3
+		// echo "<p>START".$col_n;
+		// print($col);
+		echo "<td>$col</td>";
+d103 1
+a103 1
+	echo "</tr>";
+a104 2
+echo "</table>";
+
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d1 22
+d26 1
+a26 2
+print("Submit!");
+	$varMovie = $_POST['name1'];
+d28 3
+a32 4
+// var_dump($varMovie);
+// var_dump($environment);
+
+
+d41 5
+a45 1
+$a = 'http://query.yahooapis.com/v1/public/yql?q=%20SELECT%20*%20FROM%20csv%20WHERE%20url%3D%22https%3A%2F%2Fspreadsheets0.google.com%2Fspreadsheet%2Fpub%3Fhl%3Den_US%26hl%3Den_US%26key%3D0AucLmbn95V37dHh3NFAwTzEzSWplMUpTUW5salgtRkE%26single%3Dtrue%26gid%3D0%26output%3Dcsv%22%20and%20col0%20like%20%22%25'.$environment.'%25%22&diagnostics=true';
+a50 7
+// echo "URRRRA";
+// 
+// print_r($xml);
+// 
+// 
+// 
+// iterate over query result set
+d54 4
+d86 2
+@

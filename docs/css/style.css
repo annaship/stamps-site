@@ -1,0 +1,93 @@
+/* From http://tutorialzine.com/2010/08/dynamic-faq-jquery-yql-google-docs/ */
+
+#page{
+  width:1500px;
+	margin:50px auto;
+}
+
+table#res_table
+{
+  border-collapse: collapse;
+}
+
+#res_table table, th, td
+{
+  border: 1px solid;
+  padding: 0.5em;
+}
+
+#headingSection{
+	background-color:#7b8b98;
+	padding:40px;
+/*  padding-left:60px;*/
+	position:relative;
+	border:1px solid #8b9ba7;
+	border-bottom:none;
+}
+
+/*#faqSection{
+  background:url('img/faq_bg.jpg') repeat-y #fff;
+  padding:20px 90px 60px 60px;
+  border:1px solid white;
+  text-shadow:1px 1px 0 white;
+}
+*/
+h1{
+	color:#fff;
+	font-size:36px;
+	font-weight:normal;
+}
+
+/* The expand / collapse button */
+
+/*a.button{
+  background:url('http://demo.tutorialzine.com/2010/08/dynamic-faq-jquery-yql-google-docs/img/buttons.png') no-repeat;
+  width:80px;
+  height:38px;
+  position:absolute;
+  right:50px;
+  top:45px;
+  text-indent:-9999px;
+  overflow:hidden;
+  border:none !important;
+}
+
+a.button.expand:hover{ background-position:0 -38px;}
+a.button.collapse{ background-position:0 -76px;}
+a.button.collapse:hover{ background-position:0 bottom;}
+*/
+/* Part 2*/
+
+/* Definition Lists */
+/*
+dt{
+  color:#8F9AA3;
+  font-size:25px;
+  margin-top:30px;
+  padding-left:25px;
+  position:relative;
+  cursor:pointer;
+  border:1px solid transparent;
+}
+
+dt:hover{ color:#5f6a73;}
+
+dt .icon{
+  background:url('img/bullets.png') no-repeat;
+  height:12px;
+  left:0;
+  position:absolute;
+  top:11px;
+  width:12px;
+}
+
+dt.opened .icon{ background-position:left bottom;}
+
+dd{
+  font-size:14px;
+  color:#717f89;
+  line-height:1.5;
+  padding:20px 0 0 25px;
+  width:580px;
+  display:none;
+}*/

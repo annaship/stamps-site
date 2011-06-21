@@ -1,0 +1,377 @@
+head	1.5;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.5
+date	2011.06.16.21.26.32;	author ashipunova;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2011.06.16.20.00.07;	author ashipunova;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2011.06.16.19.53.50;	author ashipunova;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2011.06.16.19.04.26;	author ashipunova;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2011.06.16.14.59.57;	author ashipunova;	state Exp;
+branches;
+next	;
+
+
+desc
+@shows up
+@
+
+
+1.5
+log
+@*** empty log message ***
+@
+text
+@$(document).ready(function(){	
+  // var q = $.YQL('SELECT * FROM csv WHERE url="https://spreadsheets0.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=0AucLmbn95V37dHh3NFAwTzEzSWplMUpTUW5salgtRkE&single=true&gid=0&output=csv" and col1 like "building%"');
+  // alert(q);
+  // 
+  // var results = feedObj.query.results.results
+  // for (var i = 0; i < results.length; i++) {
+  //   if (results[i].photo) {
+  //     // do something with photos
+  //   } else if (results[i].item) {
+  //     // do something with items
+  //   } else {
+  //     // do something with entry
+  //   }
+  // }
+  // 
+   $.YQL('SELECT * FROM csv WHERE url="https://spreadsheets0.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=0AucLmbn95V37dHh3NFAwTzEzSWplMUpTUW5salgtRkE&single=true&gid=0&output=csv" and col1 = "building"', function(data){
+    var e=data.query.results;
+    for (var i = 0; i < e.row.length; i++) {
+      for (var k = 0; k < 6; i++) {
+        $('#metadata_res').append("<li>" + e.row[i].col${k}+"</li>");
+      }
+    }
+    // alert(e.row.col.length);
+    // var a = $.parseJSON(data);
+    // $.each(e, function(){
+    //   var a = $.parseJSON(e);
+    //      alert(a);
+    //       // var month=e.substr(0,3);
+    //       // var day=e.substr(8,2);
+    //       // $('#upcomingWidget').append("<li><a href=http://upcoming.yahoo.com/event/"+e.id+"><span class='date'><small>"+month+"</small><strong>"+day+"</strong></span>"+e.name+"</a></li>");
+    // });  
+	});
+});
+
+
+// $(document).ready(function(){  
+//  $.YQL("select * from xml where url='http://upcoming.yahooapis.com/services/rest/?method=event.search&api_key=5221bdbcb9&location=29201&per_page=5&sort=start-date-asc'",function(data){
+//    var e=data.query.results.rsp.event;
+//    alert(e);
+//    $.each(e, function(index, e){
+//      var month=e.start_date_last_rendition.substr(0,3);
+//      var day=e.start_date.substr(8,2);
+//      $('#upcomingWidget').append("<li><a href=http://upcoming.yahoo.com/event/"+e.id+"><span class='date'><small>"+month+"</small><strong>"+day+"</strong></span>"+e.name+"</a></li>");
+//    }); 
+//  });
+// });
+
+
+// <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+// <script type="text/javascript" src="includes/jquery.yql.js"></script>
+// <script type='text/javascript'>
+  // $(document).ready(function(){  
+  //  $.YQL('SELECT * FROM csv WHERE url="https://spreadsheets0.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=0AucLmbn95V37dHh3NFAwTzEzSWplMUpTUW5salgtRkE&single=true&gid=0&output=csv" and col1 like "building%"',function(data){
+  //    var w   = data.query.results;
+  //    var res = $.parseJSON(w);
+  //    alert(data.query);
+  //       // var weatherImage="url(http://l.yimg.com/a/i/us/nws/weather/gr/"+w.item.condition.code+"d.png)";
+  //       // var wd=w.wind.direction;
+  //       // if(wd>=348.75&&wd<=360){wd="N"};if(wd>=0&&wd<11.25){wd="N"};if(wd>=11.25&&wd<33.75){wd="NNE"};if(wd>=33.75&&wd<56.25){wd="NE"};if(wd>=56.25&&wd<78.75){wd="ENE"};if(wd>=78.75&&wd<101.25){wd="E"};if(wd>=101.25&&wd<123.75){wd="ESE"};if(wd>=123.75&&wd<146.25){wd="SE"};if(wd>=146.25&&wd<168.75){wd="SSE"};if(wd>=168.75&&wd<191.25){wd="S"};if(wd>=191.25 && wd<213.75){wd="SSW"};if(wd>=213.75&&wd<236.25){wd="SW"};if(wd>=236.25&&wd<258.75){wd="WSW"};if(wd>=258.75 && wd<281.25){wd="W"};if(wd>=281.25&&wd<303.75){wd="WNW"};if(wd>=303.75&&wd<326.25){wd="NW"};if(wd>=326.25&&wd<348.75){wd="NNW"};
+  //       // $('#weatherWidget').css("background-image",weatherImage);
+  //       // $('#weatherTemp').html(w.item.condition.temp+"°");
+  //       // $('#weatherText').html(w.item.condition.text);
+  //       // $('#weatherWind').html(wd +" "+w.wind.speed+"mph");
+  //       // $('#weatherLink').html("<a href='"+w.item.link+"'>Full Forecast</a>");
+  //  });
+  // });
+// </script>
+
+
+// window.onload = function(){ 
+//   var yurl = 'http://query.yahooapis.com/v1/public/yql?q=%20SELECT%20*%20FROM%20csv%20WHERE%20url%3D%22https%3A%2F%2Fspreadsheets0.google.com%2Fspreadsheet%2Fpub%3Fhl%3Den_US%26hl%3Den_US%26key%3D0AucLmbn95V37dHh3NFAwTzEzSWplMUpTUW5salgtRkE%26single%3Dtrue%26gid%3D0%26output%3Dcsv%22%20and%20col1%20like%20%22building%25%22&diagnostics=true'
+//   $.get(yurl, function(d){ 
+//     alert(yurl); 
+//   }
+// }  
+  // 
+  //         var yurl = 'http://query.yahooapis.com/v1/public/yql?q=%20SELECT%20*%20FROM%20csv%20WHERE%20url%3D%22https%3A%2F%2Fspreadsheets0.google.com%2Fspreadsheet%2Fpub%3Fhl%3Den_US%26hl%3Den_US%26key%3D0AucLmbn95V37dHh3NFAwTzEzSWplMUpTUW5salgtRkE%26single%3Dtrue%26gid%3D0%26output%3Dcsv%22%20and%20col1%20like%20%22building%25%22&diagnostics=true'
+  //         
+  //         $.get(yurl, function(d){  
+  //         $('body').append('<h1> Recommended Web Development Books </h1>');  
+  //         $('body').append(' 
+  // <dl>');  
+  //   
+  //         $(d).find('book').each(function(){  
+  //   
+  //             var $book = $(this);  
+  //             var title = $book.attr("title");  
+  //             var description = $book.find('description').text();  
+  //             var imageurl = $book.attr('imageurl');  
+  //   
+  //             var html = '<dt> <img class="bookImage" alt="" src="' + imageurl + '" /> </dt>';  
+  //             html += '<dd> <span class="loadingPic" alt="Loading" />';  
+  //             html += '<p class="title">' + title + '</p>';  
+  //             html += '<p> ' + description + '</p>' ;  
+  //             html += '</dd>';  
+  //   
+  //             $('dl').append($(html));  
+  //   
+  //             $('.loadingPic').fadeOut(1400);  
+  //         });  
+  //     });  
+  // });  
+  // </dl>
+
+// // From http://tutorialzine.com/2010/08/dynamic-faq-jquery-yql-google-docs/
+// 
+// window.onload = function(){
+//  // $('#container').html('text can include <b>html code</b>');
+//   // var yqlURL = 'http://query.yahooapis.com/v1/public/yql?q=%20SELECT%20*%20FROM%20csv%20WHERE%20url%3D%22https%3A%2F%2Fspreadsheets.google.com%2Fspreadsheet%2Fpub%3Fhl%3Den_US%26hl%3Den_US%26key%3D0AucLmbn95V37dFFaR1lhd2NOaUFEVEpyNkdBTmNzYkE%26single%3Dtrue%26gid%3D0%26output%3Dcsv%22&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=cbfunc';
+//   var yqlURL = "http://query.yahooapis.com/v1/public/yql?q=%20SELECT%20*%20FROM%20csv%20WHERE%20url%3D%22https%3A%2F%2Fspreadsheets0.google.com%2Fspreadsheet%2Fpub%3Fhl%3Den_US%26hl%3Den_US%26key%3D0AucLmbn95V37dHh3NFAwTzEzSWplMUpTUW5salgtRkE%26single%3Dtrue%26gid%3D0%26output%3Dcsv%22%20and%20col1%20like%20%22building%25%22&diagnostics=true"
+// 
+//   $.getJSON(yqlURL, function(msg){
+//      alert("welcome"); 
+//   //   $.each(msg.query.results.row,function(){
+//   //    $('#container').text(this);
+//   //   }
+//   }
+// }
+// 
+// var manageCSV = function() {
+//     var x;
+// 
+//     $.get('output.csv', function(data) {
+//         x = data;
+//     });
+// 
+//     //do what you want with x
+// }
+// 
+// 
+// // $(document).ready(function(){
+// //   alert.
+// //   $('#container').html('text can include <b>html code</b>');
+// // }
+// //  // The published URL of your Google Docs spreadsheet as CSV:
+// //  var csvURL = 'https://spreadsheets0.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=0AucLmbn95V37dHh3NFAwTzEzSWplMUpTUW5salgtRkE&single=true&gid=0&output=csv';
+// // 
+// //  // The YQL address:
+// //   // var yqlURL = "http://query.yahooapis.com/v1/public/yql?q="+
+// //   //    "select%20*%20from%20csv%20where%20url%3D'"+encodeURIComponent(csvURL)+
+// //   //    "'%20and%20columns%3D'question%2Canswer'&format=json&callback=?";
+// //  var yqlURL = 'http://query.yahooapis.com/v1/public/yql?q=%20SELECT%20*%20FROM%20csv%20WHERE%20url%3D%22https%3A%2F%2Fspreadsheets.google.com%2Fspreadsheet%2Fpub%3Fhl%3Den_US%26hl%3Den_US%26key%3D0AucLmbn95V37dFFaR1lhd2NOaUFEVEpyNkdBTmNzYkE%26single%3Dtrue%26gid%3D0%26output%3Dcsv%22&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=cbfunc';
+// // 
+// //  $.getJSON(yqlURL,function(msg){
+// // 
+// //    var dl = $('<dl>');
+// // 
+// //    // Looping through all the entries in the CSV file:
+// //    $.each(msg.query.results.row,function(){
+// //       
+// //       my_row = this;
+// //       dl.append('<dt><span class="icon"></span>'+
+// //      my_row+'</dt>');
+// //      
+// //      // Sometimes the entries are surrounded by double quotes. This is why
+// //      // we strip them first with the replace method:
+// // 
+// //       // var answer = this.answer.replace(/""/g,'"').replace(/^"|"$/g,'');
+// //       // var question = this.question.replace(/""/g,'"').replace(/^"|"$/g,'');
+// // 
+// //      // Formatting the FAQ as a definition list: dt for the question
+// //      // and a dd for the answer.
+// // 
+// //       // dl.append('<dt><span class="icon"></span>'+
+// //       // question+'</dt><dd>'+answer+'</dd>');
+// //    });
+// // 
+// //    // Appending the definition list:
+// //    $('#faqSection').append(dl);
+// // 
+// //    $('dt').live('click',function(){
+// //      var dd = $(this).next();
+// // 
+// //      // If the title is clicked and the dd is not currently animated,
+// //      // start an animation with the slideToggle() method.
+// // 
+// //      if(!dd.is(':animated')){
+// //        dd.slideToggle();
+// //        $(this).toggleClass('opened');
+// //      }
+// // 
+// //    });
+// // 
+// //    $('a.button').click(function(){
+// // 
+// //      // To expand/collapse all of the FAQs simultaneously,
+// //      // just trigger the click event on the DTs
+// // 
+// //      if($(this).hasClass('collapse')){
+// //        $('dt.opened').click();
+// //      }
+// //      else $('dt:not(.opened)').click();
+// // 
+// //      $(this).toggleClass('expand collapse');
+// // 
+// //      return false;
+// //    });
+// // 
+// //  });
+// // });@
+
+
+1.4
+log
+@give all from col1
+@
+text
+@d16 1
+a16 1
+   $.YQL('SELECT * FROM csv WHERE url="https://spreadsheets0.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=0AucLmbn95V37dHh3NFAwTzEzSWplMUpTUW5salgtRkE&single=true&gid=0&output=csv" and col1 like "building%"', function(data){
+d19 3
+a21 3
+    
+    
+      $('#metadata_res').append("<li>"+e.row[i].col0+"</li>");
+d23 1
+a23 1
+    // alert(e.row.length);
+@
+
+
+1.3
+log
+@give air, surface, water
+@
+text
+@d18 1
+a18 1
+    $('#upcomingWidget').append("<li>"+e.row[0].col0+"</li>");
+d20 5
+a24 2
+    // alert(e);
+    var a = $.parseJSON(data);
+@
+
+
+1.2
+log
+@weather
+@
+text
+@d1 45
+d49 15
+a63 13
+	$(document).ready(function(){	
+		$.YQL("select * from weather.forecast where location=29201",function(data){
+			var w=data.query.results.channel;
+			var weatherImage="url(http://l.yimg.com/a/i/us/nws/weather/gr/"+w.item.condition.code+"d.png)";
+			var wd=w.wind.direction;
+			if(wd>=348.75&&wd<=360){wd="N"};if(wd>=0&&wd<11.25){wd="N"};if(wd>=11.25&&wd<33.75){wd="NNE"};if(wd>=33.75&&wd<56.25){wd="NE"};if(wd>=56.25&&wd<78.75){wd="ENE"};if(wd>=78.75&&wd<101.25){wd="E"};if(wd>=101.25&&wd<123.75){wd="ESE"};if(wd>=123.75&&wd<146.25){wd="SE"};if(wd>=146.25&&wd<168.75){wd="SSE"};if(wd>=168.75&&wd<191.25){wd="S"};if(wd>=191.25 && wd<213.75){wd="SSW"};if(wd>=213.75&&wd<236.25){wd="SW"};if(wd>=236.25&&wd<258.75){wd="WSW"};if(wd>=258.75 && wd<281.25){wd="W"};if(wd>=281.25&&wd<303.75){wd="WNW"};if(wd>=303.75&&wd<326.25){wd="NW"};if(wd>=326.25&&wd<348.75){wd="NNW"};
+			$('#weatherWidget').css("background-image",weatherImage);
+			$('#weatherTemp').html(w.item.condition.temp+"°");
+			$('#weatherText').html(w.item.condition.text);
+			$('#weatherWind').html(wd +" "+w.wind.speed+"mph");
+			$('#weatherLink').html("<a href='"+w.item.link+"'>Full Forecast</a>");
+		});
+	});
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d1 14
+a14 31
+// From http://tutorialzine.com/2010/08/dynamic-faq-jquery-yql-google-docs/
+
+$(document).ready(function(){
+
+	// The published URL of your Google Docs spreadsheet as CSV:
+	var csvURL = 'https://spreadsheets.google.com/pub?key='+
+			'0Ahe1-YRnPKQ_dEI0STVPX05NVTJuNENhVlhKZklNUlE&hl=en&output=csv';
+
+	// The YQL address:
+	var yqlURL =	"http://query.yahooapis.com/v1/public/yql?q="+
+			"select%20*%20from%20csv%20where%20url%3D'"+encodeURIComponent(csvURL)+
+			"'%20and%20columns%3D'question%2Canswer'&format=json&callback=?";
+
+	$.getJSON(yqlURL,function(msg){
+
+		var dl = $('<dl>');
+
+		// Looping through all the entries in the CSV file:
+		$.each(msg.query.results.row,function(){
+
+			// Sometimes the entries are surrounded by double quotes. This is why
+			// we strip them first with the replace method:
+
+			var answer = this.answer.replace(/""/g,'"').replace(/^"|"$/g,'');
+			var question = this.question.replace(/""/g,'"').replace(/^"|"$/g,'');
+
+			// Formatting the FAQ as a definition list: dt for the question
+			// and a dd for the answer.
+
+			dl.append('<dt><span class="icon"></span>'+
+			question+'</dt><dd>'+answer+'</dd>');
+d16 2
+a18 5
+		// Appending the definition list:
+		$('#faqSection').append(dl);
+
+		$('dt').live('click',function(){
+			var dd = $(this).next();
+d20 131
+a150 27
+			// If the title is clicked and the dd is not currently animated,
+			// start an animation with the slideToggle() method.
+
+			if(!dd.is(':animated')){
+				dd.slideToggle();
+				$(this).toggleClass('opened');
+			}
+
+		});
+
+		$('a.button').click(function(){
+
+			// To expand/collapse all of the FAQs simultaneously,
+			// just trigger the click event on the DTs
+
+			if($(this).hasClass('collapse')){
+				$('dt.opened').click();
+			}
+			else $('dt:not(.opened)').click();
+
+			$(this).toggleClass('expand collapse');
+
+			return false;
+		});
+
+	});
+});@
