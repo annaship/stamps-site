@@ -1,3 +1,59 @@
+body,
+html {
+/* width: 1600px;*/
+  margin-top: 0px;
+  margin-bottom: 0px;
+	margin-left: auto;
+	margin-right: auto;
+  padding: 0;
+  background: #E0E0E0;
+  font-family: Arial, Helvetica, Sans Serif;
+}
+
+#wrap {
+  width: 1430px;
+/* margin: auto;*/
+/* background: #99c;*/
+}
+
+#header {
+/* height: 100px;*/
+}
+
+#main-text {
+  float: right;
+  width: 85%;
+}
+
+#sidebar {
+  float: left;
+  width: 15%;
+}
+
+#sub-header {
+  width: 100%;
+  text-align: center;
+}
+
+#left-part {
+  float: left;
+  padding-top: 15px;
+  width: 20%; 
+}
+
+#right-part {
+  float: right;
+  width: 80%; 
+}
+
+#footer {
+  clear: both;
+}
+
+* html #footer {
+  height: 1px;
+}
+
 /* navigation */
 
 #nav ul {
@@ -19,14 +75,14 @@
 /* images */
 
 .header_top { 
-  width: 100%;
+  width: 1440px;
   float: left; 
   position: relative; 
   height: 100px;
 } 
 
 .header_bottom { 
-  width: 100%;
+  width: 1440px;
 }
 
 .dna {
@@ -44,7 +100,7 @@
 }
 
 .stamps-logo {
-  width: 100px;
+  width: 65%;
 }
 
 /* table */
@@ -84,12 +140,12 @@ table#res_table
 #sidebar {
 /* display: block;
   background: url(images/menu_bg.gif) no-repeat;*/
-/*  vertical-align: middle;
+  vertical-align: middle;
   font-size: 12px;
   font-weight: normal;
   color: white;
   text-align: left;
-*//*  padding-top: 2px;*/
+  padding-top: 2px;
 /* padding-left: 20px;*/
 /* height: auto;*/
 }
@@ -104,12 +160,12 @@ table#res_table
   padding-left: 25px;
 }
 
-.sub-list {
+#sub-list {
   background-color: #395D8D;
 }
 
 
-.side-title {
+#side-title {
   color: #395D8D;
   text-transform: uppercase;
   font-size: 16px;
@@ -125,7 +181,7 @@ table#res_table
 }
 
 
-a.side-link {
+a#side-link {
   color: #E0E0E0;
   font-size: 16px;
   text-decoration: none; 
