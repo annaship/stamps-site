@@ -1,5 +1,4 @@
 <?php
-
 	include("beginning.php");
 	ini_set('display_errors', 1);
 	ini_set('log_errors', 1);
@@ -14,13 +13,12 @@
 
 	$results = $xml->results;
 	
-	// echo '<TABLE WIDTH="90%" BGCOLOR="#CCFFCC" CELLSPACING="1" CELLPADDING="4" BORDER="1">';
-	
 	echo "<table id='res_table'>";
 	// echo "<tr><th>environment</th> <th>section</th> <th>structured comment</th> <th>item</th> <th>units</th> <th>description</th> </tr>";
 	foreach ($results -> row as $row) {
 		echo "<tr>";
 		foreach ($row as $col_n => $col) {
+			$res = add_link($col);
 			echo "<td>$col</td>";
 		}
 		echo "</tr>";

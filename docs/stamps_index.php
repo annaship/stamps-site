@@ -13,9 +13,9 @@
 					<p><a href="stamps_calendar.php"> Schedule</a></br> 
 						 Information for students </br> 
 						 Information for faculty
-					</p>
-					
+					</p>	
 				</div>
+				<hr/>
 			</div>
 			<div class="home-text">
 				<p>Deep DNA sequencing using massively-parallel, next-generation technology has enabled nearly comprehensive environmental surveys that can describe the different kinds of microbes in a community and their relative abundance. These descriptions of richness and evenness make possible estimates of microbial diversity, but the size of the required data sets pose enormous computational challenges. The rapidly expanding flow of information from next generation DNA sequencing platforms has fueled healthy debate about best practices for data analysis while at the same time building a user demand for tools that can address important ecological questions. The STAMPS course will promote dialogue and the exchange of ideas between experts in analysis of metagenomic data and offer interdisciplinary bioinformatic and statistical training to practitioners of molecular microbial ecology and genomics.

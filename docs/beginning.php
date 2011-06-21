@@ -14,13 +14,14 @@
 		<div id="header">
 			<a href="stamps_index.php">
 				<img class="header_top" src="/images/stamps_header_top.jpg" alt="STAMPS Header - Top">
-				<img id="header_bottom" src="/images/jbpc_header_bottom6.jpg" alt="STAMPS Header - Bottom">
+				<img class="header_bottom" src="/images/jbpc_header_bottom6.jpg" alt="STAMPS Header - Bottom">
 				<img class="mbl_logo" src="/images/logo_mbl.png" alt="MBL Logo" height="90">
 				<img class="dna" src="/images/DNA_header_trans.gif" alt="DNA">
 			</a>
 		</div>
 		<!-- <div id="nav">nav</div> -->
 		<?php
+			include("my_functions.php");
 			include("left_menu.php");
 		?>
 		<div id="main-text">

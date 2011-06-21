@@ -1,6 +1,8 @@
 body,
 html {
 /*  width: 1600px;*/
+  margin-top: 0px;
+  margin-bottom: 0px;
 	margin-left: auto;
 	margin-right: auto;
   padding: 0;
