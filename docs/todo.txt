@@ -4,7 +4,7 @@ color on a:cover
 	table w links 
 table w colors
 	banner w Stamps text
-links from course directors
+	links from course directors
 	logo - change background
 esprit and other links to tools
 navigation: home, schedule,
