@@ -7,4 +7,13 @@ table w colors
 	links from course directors
 	logo - change background
 esprit and other links to tools
-navigation: home, schedule,
+	navigation: home, schedule,
+navigation: padding bottom
+navigation: buttons
+
+create alias on server for
+cp  beginning.php /usr/local/www/stamps/docs; cp -r css /usr/local/www/stamps/docs; cp  end.php /usr/local/www/stamps/docs; cp -r images /usr/local/www/stamps/docs; cp stamps_index.php /usr/local/www/stamps/docs/index.php; cp  left_menu.php /usr/local/www/stamps/docs; cp  my_arrays.php /usr/local/www/stamps/docs; cp  my_functions.php /usr/local/www/stamps/docs; cp  stamps_calendar.php /usr/local/www/stamps/docs;
+
+ask Rich to use links
+ln -s beginning.php /usr/local/www/stamps/docs; ln -s css /usr/local/www/stamps/docs; ln -s end.php /usr/local/www/stamps/docs; ln -s images /usr/local/www/stamps/docs; ln -s stamps_index.php /usr/local/www/stamps/docs/index.php; ln -s left_menu.php /usr/local/www/stamps/docs; ln -s my_arrays.php /usr/local/www/stamps/docs; ln -s my_functions.php /usr/local/www/stamps/docs; ln -s stamps_calendar.php /usr/local/www/stamps/docs; 
+
