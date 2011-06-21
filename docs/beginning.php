@@ -20,16 +20,18 @@
 				<img class="dna" src="/images/DNA_header_trans.gif" alt="DNA">
 			</a>
 		</div>
-		<div class="grid_12" id="nav">
-			<ul>
-				<li><a href="stamps_index.php">Home</a></li>
-				<li><a href="stamps_calendar.php">Schedule</a></li>
-			</ul>
-		</div>
 		<?php
 			include("my_functions.php");
 			include("left_menu.php");
 		?>
 		<div class="grid_10 omega" id="main-text">
+			<div class="grid_10" id="nav">
+				<ul>
+					<li><a href="stamps_index.php">Home</a></li>
+					<li><a href="stamps_calendar.php">Schedule</a></li>
+				</ul>
+			</div>
+			<div class="clear">&nbsp;</div>
+
 <!-- 		ul.a {list-style-type: circle;}
  -->

@@ -1,5 +1,9 @@
 /* navigation */
 
+#nav {
+  text-align: center;
+}
+
 #nav ul {
   margin: 0;
   padding: 0;
