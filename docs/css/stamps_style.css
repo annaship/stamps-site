@@ -1,6 +1,8 @@
+/*#right-part {}*/
+
 /* navigation */
 
-#nav {
+#nav, #right-part {
   text-align: center;
 }
 
@@ -17,7 +19,9 @@
 }
 
 #nav li a {
-  color: green;
+  color: gray;
+  padding-left: 10px; 
+  padding-right: 10px;
 }
 
 /* images */
@@ -48,7 +52,10 @@
 }
 
 .stamps-logo {
-  width: 100px;
+  width: 120%;
+/*  vertical-align: middle;*/
+  padding-top: 20px; 
+  padding-left: 20px;
 }
 
 /* table */
