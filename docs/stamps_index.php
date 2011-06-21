@@ -8,7 +8,7 @@
 				<div id="right-part">
 					<h2>August 3 – August 13, 2011</h2>
 				
-					<p>Course directors Mitchell Sogin and David Mark Welch</p>
+					<p>Course directors <a href="http://jbpc.mbl.edu/labs-msogin.html">Mitchell Sogin</a> and <a href=" http://jbpc.mbl.edu/labs-dmarkwelch.html">David Mark Welch</a></p>
 					
 					<p><a href="stamps_calendar.php"> Schedule</a></br> 
 						 Information for students </br> 

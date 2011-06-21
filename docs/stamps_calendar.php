@@ -19,12 +19,11 @@
 		echo "<tr>";
 		foreach ($row as $col_n => $col) {
 			$res = add_link($col);
-			echo "<td>$col</td>";
+			echo "<td>$res</td>";
 		}
 		echo "</tr>";
 	}
 	echo "</table>";
-// }
 
 	include("end.php");
 

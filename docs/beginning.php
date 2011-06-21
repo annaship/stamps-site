@@ -19,7 +19,7 @@
 				<img class="dna" src="/images/DNA_header_trans.gif" alt="DNA">
 			</a>
 		</div>
-		<!-- <div id="nav">nav</div> -->
+		<div id="nav"></div>
 		<?php
 			include("my_functions.php");
 			include("left_menu.php");
