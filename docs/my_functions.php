@@ -40,6 +40,7 @@ function add_link($entry) {
 	$words = create_names($entry);
 	$word  = "";
 	$link  = "";
+	$new_entry = "";
 	// print_r($words);
 	// Array ( [0] => [1] => ) Array ( [0] => 08/03/11 )
 	// Array ( [0] => Silva [1] => Prüße ) 
@@ -53,14 +54,13 @@ function add_link($entry) {
 		if ($full_name) {
 			// echo "full_name _".$full_name."_<p/>";
 			$link = $name_links[$full_name];	
-			// echo "link _".$link."_<p/>";
-		// 	if ($link != "") {
-		// 		echo "URA ".$link."<p/>";
-		// 	
-		// 		// $new_entry =
-		// 	} 
+			$new_entry .= $link." ";
+		}
+		else {
+			$new_entry .= $word." ";	
 		}
 	}
+	echo "new_entry ".$new_entry."<p/>";
 	// URA http://jbpc.mbl.edu/labs-msogin.html
 
 	// foreach ($words as $word) {
