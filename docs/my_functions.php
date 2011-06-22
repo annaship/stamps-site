@@ -13,65 +13,42 @@ function search_array($array, $search) {
 }
 
 function build_link($words, $link, $my_class="") {
-	return "<a class = \"".$my_class."\" target=\"_blank\" href=\"".$link."\">".$words." </a>";
+	return "<a class = \"" . $my_class . "\" target=\"_blank\" href=\"" . $link . "\">" . $words . " </a>";
 }
 
-function add_link($entry, $my_class="") {
+function split_words($entry, $my_class="") {
 	global $name_links;
 	$words = preg_split("/[\s]+/", $entry);
-	$new_entry = "";
+	$res_link = "";
 	foreach ($words as $word) {
 		$full_name = search_array(array_keys($name_links), $word);
 		if ($full_name) {
-			// echo "full_name _".$full_name."_<p/>";
 			$link = $name_links[$full_name];	
-			$new_entry .= build_link($word, $link, $my_class="");
-			// $new_entry .= "<a class = \"".$my_class."\" target=\"_blank\" href=\"".$link."\">".$word." </a>";
+			$res_link .= build_link($word, $link, $my_class="");
 		}
 		else {
-			$new_entry .= $word." ";	
+			$res_link .= $word." ";	
 		}
 		
 	}
-	// echo "new_entry = ".$new_entry."<p/>";
-	return $new_entry;
+	// echo "res_link = " . $res_link . "<p/>";
+	return $res_link;
 }
 
 function create_link($entry, $my_class="") {
 	global $name_links;
 
+	// full name and exist in keys
 	if (is_string($entry)) {
 		if (isset($name_links[$entry])) {
-			$full_name = $entry;
-			$new_entry = build_link($full_name, $name_links[$entry], $my_class);
+			$res_link = build_link($entry, $name_links[$entry], $my_class);
 		}
 	}
+	// e.g. csv parcing
 	else {
-		$full_name = check_words($entry);
+		$res_link = split_words($entry, $my_class="");
 	}
-	
-	
-	// if (isset($name_links[$entry])) {
-	// 	echo "UUU";
-	// }
-
-
-	// $link = $name_links[$entry];
-	// echo "full_name = ".$full_name."<p/>";
-	// foreach ($words as $word) {
-		// echo "URA ".$word."<p/>";
-		// $full_name = search_array(array_keys($name_links), $word);
-		// if ($full_name) {
-		// 	// echo "full_name _".$full_name."_<p/>";
-		// 	$link = $name_links[$full_name];	
-		// 	$new_entry .= build_link($word, $link, $my_class="");
-		// 	// $new_entry .= "<a class = \"".$my_class."\" target=\"_blank\" href=\"".$link."\">".$word." </a>";
-		// }
-		// else {
-		// 	$new_entry .= $word." ";	
-		// }
-	// }
-	return $new_entry;
+	return $res_link;
 }
 
 

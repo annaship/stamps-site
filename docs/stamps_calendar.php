@@ -18,7 +18,9 @@
 	foreach ($results -> row as $row) {
 		echo "<tr>";
 		foreach ($row as $col_n => $col) {
-			$res = add_link($col);
+			// $res = add_link($col);
+			$res = create_link($col);
+			// create_link
 			echo "<td>$res</td>";
 		}
 		echo "</tr>";
