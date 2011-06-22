@@ -1,7 +1,7 @@
 <?php
 	// include("my_functions.php");
-	$a = add_link("Mitchell Sogin", "side-link");
-	echo "a = ".$a;
+	// $a = add_link("Mitchell Sogin", "side-link");
+	// echo "a = ".$a;
 ?>
 
 <div class="grid_2 alpha" id="sidebar">
