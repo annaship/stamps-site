@@ -32,7 +32,12 @@ $tool_links = array(
 "Silva"							=> "http://www.arb-silva.de/",
 "UClust"						=> "http://www.drive5.com/usearch/",
 "Unifrac"						=> "http://bmf2.colorado.edu/unifrac/",
-"VAMPS"							=> "http://vamps.mbl.edu/",
+"VAMPS"							=> "http://vamps.mbl.edu/"
+);
+
+$comp_facilities_links = array(
+	"Computer Resources"  => "http://jbpc.mbl.edu/computational-resources.html",
+	"Account information" => ""
 );
 
 $description_words = array(

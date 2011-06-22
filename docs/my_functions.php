@@ -16,7 +16,7 @@ function build_link($words, $link, $my_class="") {
 	return "<a class = \"" . $my_class . "\" target=\"_blank\" href=\"" . $link . "\">" . $words . " </a>";
 }
 
-function split_words($entry, $my_class="") {
+function create_link($entry, $my_class="") {
 	global $name_links;
 	$words = preg_split("/[\s]+/", $entry);
 	$res_link = "";
@@ -35,21 +35,21 @@ function split_words($entry, $my_class="") {
 	return $res_link;
 }
 
-function create_link($entry, $my_class="") {
-	global $name_links;
-
-	// full name and exist in keys
-	if (is_string($entry)) {
-		if (isset($name_links[$entry])) {
-			$res_link = build_link($entry, $name_links[$entry], $my_class);
-		}
-	}
-	// e.g. csv parcing
-	else {
-		$res_link = split_words($entry, $my_class="");
-	}
-	return $res_link;
-}
+// function create_link($entry, $my_class="") {
+// 	global $name_links;
+// 
+// 	// full name and exist in keys
+// 	if (is_string($entry)) {
+// 		if (isset($name_links[$entry])) {
+// 			$res_link = build_link($entry, $name_links[$entry], $my_class);
+// 		}
+// 	}
+// 	// e.g. csv parcing
+// 	else {
+// 		$res_link = split_words($entry, $my_class="");
+// 	}
+// 	return $res_link;
+// }
 
 
 ?>

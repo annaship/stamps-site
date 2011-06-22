@@ -34,9 +34,14 @@
 		</div>
 		<div class="sub-list">
 			<ul>
-				<li><a class="side-link" target="_blank" href="http://jbpc.mbl.edu/computational-resources.html">Computer Resources</a></li>
+				<?php
+					foreach (array_keys($comp_facilities_links) as $name) {
+						echo "<li>" . build_link($name, $comp_facilities_links[$name], "side-link") . "</li>";
+					}
+				?>					
+				<!-- <li><a class="side-link" target="_blank" href="http://jbpc.mbl.edu/computational-resources.html">Computer Resources</a></li> -->
 				<!-- <li><a class="side-link" target="_blank" href="">Account information</a></li> -->
-				<li>Account information</li>
+				<!-- <li>Account information</li> -->
 			</ul>			
 		</div>
 </div>
