@@ -1,17 +1,8 @@
-<?php
-	// include("my_functions.php");
-	// $a = add_link("Mitchell Sogin", "side-link");
-	// echo "a = ".$a;
-?>
-
 <div class="grid_2 alpha" id="sidebar">
 		<div class="side-title">Faculty
 		</div>
 			<div class="sub-list">
-				<!-- <a href="http://jbpc.mbl.edu/labs-dmarkwelch.html" class="mainlevel">
-											David Mark Welch</a> -->
 				<ul>
-					<!-- <li><a class="side-link" target="_blank" href="http://jbpc.mbl.edu/labs-msogin.html">Mitchell Sogin</a></li> -->
 					<?php
 						foreach (array_keys($name_links) as $full_name) {
 							echo "<li>" . build_link($full_name, $name_links[$full_name], "side-link") . "</li>";
