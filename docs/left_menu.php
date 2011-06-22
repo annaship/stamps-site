@@ -1,3 +1,9 @@
+<?php
+	// include("my_functions.php");
+	$a = add_link("Mitchell Sogin", "side-link");
+	echo "a = ".$a;
+?>
+
 <div class="grid_2 alpha" id="sidebar">
 		<div class="side-title">Faculty
 		</div>
@@ -5,7 +11,8 @@
 				<!-- <a href="http://jbpc.mbl.edu/labs-dmarkwelch.html" class="mainlevel">
 											David Mark Welch</a> -->
 				<ul>
-					<li><a class="side-link" target="_blank" href="http://jbpc.mbl.edu/labs-msogin.html">Mitchell Sogin</a></li>
+					<!-- <li><a class="side-link" target="_blank" href="http://jbpc.mbl.edu/labs-msogin.html">Mitchell Sogin</a></li> -->
+					<li><?echo add_link("Mitchell Sogin", "side-link")?></li>
 					<li><a class="side-link" target="_blank" href="http://jbpc.mbl.edu/labs-dmarkwelch.html">David Mark Welch</a></li>
 					<li><a class="side-link" target="_blank" href="http://esd.lbl.gov/ESD_staff/andersen/index.html">Gary Anderson</a></li>
 					<li><a class="side-link" target="_blank" href="http://www.stat.cornell.edu/~bunge/">John Bunge</a></li>

@@ -12,20 +12,20 @@ function search_array($array, $search) {
   return $result;
 }
 
-function add_link($entry) {
+function add_link($entry, $my_class="") {
 	global $name_links;
 	$words = preg_split("/[\s]+/", $entry);
 	$word  = "";
 	$link  = "";
 	$new_entry = "";
-
+	
 	foreach ($words as $word) {
 		// echo "URA ".$word."<p/>";
 		$full_name = search_array(array_keys($name_links), $word);
 		if ($full_name) {
 			// echo "full_name _".$full_name."_<p/>";
 			$link = $name_links[$full_name];	
-			$new_entry .= "<a target=\"_blank\" href=\"".$link."\">".$word."</a>";
+			$new_entry .= "<a class = \"".$my_class."\" target=\"_blank\" href=\"".$link."\">".$word." </a>";
 		}
 		else {
 			$new_entry .= $word." ";	
