@@ -12,23 +12,12 @@
 											David Mark Welch</a> -->
 				<ul>
 					<!-- <li><a class="side-link" target="_blank" href="http://jbpc.mbl.edu/labs-msogin.html">Mitchell Sogin</a></li> -->
-					<li><?echo create_link("Mitchell Sogin", "side-link")?></li>
-					<li><?echo create_link("David Mark Welch", "side-link")?></li>
-					<li><?echo create_link("Gary Anderson", "side-link")?></li>
-					<li><?echo create_link("John Bunge", "side-link")?></li>
-					<li><?echo create_link("James Cole", "side-link")?></li>
-					<li><?echo create_link("Robert Edgar", "side-link")?></li>
-					<li><?echo create_link("Jed Fuhrman", "side-link")?></li>
-					<li><?echo create_link("Susan Huse", "side-link")?></li>
-					<li><?echo create_link("Rob Knight", "side-link")?></li>
-					<li><?echo create_link("Alice McHardy", "side-link")?></li>
-					<li><?echo create_link("Hilary Morrison", "side-link")?></li>
-					<li><?echo create_link("Elmer Prüße", "side-link")?></li>
-					<li><?echo create_link("Chris Quince", "side-link")?></li>
-					<li><?echo create_link("Antonis Rokas", "side-link")?></li>
-					<li><?echo create_link("Patrick Schloss", "side-link")?></li>
-					<li><?echo create_link("Yijun Sun", "side-link")?></li>
-					<li><?echo create_link("Peter Turnbaugh", "side-link")?></li>
+					<?php
+						// include 
+						foreach (array_keys($name_links) as $full_name) {
+							echo "<li>" . build_link($full_name, $name_links[$full_name], "side-link") . "</li>";
+						}
+					?>					
 				</ul>
 			</div>
 		<div class="side-title">Tools
