@@ -24,7 +24,7 @@
 			include("left_menu.php");
 		?>
 		<div class="grid_10 omega" id="main-text">
-			<div class="grid_10" id="nav">
+			<div class="grid_2 push_8 omega" id="nav">
 				<ul>
 					<li><a href="index.php">Home</a></li>
 					<li><a href="stamps_calendar.php">Schedule</a></li>

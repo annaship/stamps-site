@@ -4,8 +4,12 @@
 
 /* navigation */
 
-#nav, #right-part {
+#right-part {
   text-align: center;
+}
+
+#nav {
+  text-align: right;
 }
 
 #nav ul {
@@ -22,7 +26,7 @@
 
 #nav li a {
   color: gray;
-  padding: 10px; 
+  padding: 5px; 
 /*  padding-right: 10px;*/
   text-decoration: none; 
 }
@@ -30,7 +34,7 @@
 #nav a:hover {
 /*  color: #e15733;*/
   color: black;
-  padding: 10px; 
+  padding: 5px; 
   background-color: #afae6b;
   text-decoration: none; 
 }
