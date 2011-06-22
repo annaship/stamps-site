@@ -1,4 +1,6 @@
-/*#right-part {}*/
+#res_table {
+  padding-top: 0px; margin-top: 10px;
+}
 
 /* navigation */
 
@@ -20,9 +22,19 @@
 
 #nav li a {
   color: gray;
-  padding-left: 10px; 
-  padding-right: 10px;
+  padding: 10px; 
+/*  padding-right: 10px;*/
+  text-decoration: none; 
 }
+
+#nav a:hover {
+/*  color: #e15733;*/
+  color: black;
+  padding: 10px; 
+  background-color: #afae6b;
+  text-decoration: none; 
+}
+
 
 /* images */
 
@@ -149,3 +161,10 @@ a:hover.side-link {
   text-decoration: none; 
 }
 
+#nav a:hover {
+/*  color: #e15733;*/
+  color: black;
+  background-color: #afae6b;
+  font-size: 16px;
+  text-decoration: none; 
+}
