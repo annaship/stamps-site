@@ -4,13 +4,21 @@ function highlightLink()
   menu_tag = 'nav';
 
 //Get filename from the URL
-	thisPage = document.URL.substring(document.URL.lastIndexOf("/")+1, document.URL.length);
+	// thisPage = document.URL.substring(document.URL.lastIndexOf("/")+1, document.URL.length);
   // for (n=1; n < 3; n++ ) {
     // my_obj = document.getElementById('nav').childNodes[1].childNodes[n].getElementsByTagName('a');
     my_obj = document.getElementById('nav').childNodes[1].children;
+    myURI = my_obj[0].baseURI;
+    thisPage = myURI.substring(myURI.lastIndexOf("/")+1, myURI.length)
+    // window.alert(thisPage);
     for (i=0; i < my_obj.length; i++ ) {
-      // window.alert(my_obj[0].baseURI);
-      window.alert(my_obj[i].childNodes[0].href);
+      myHref = my_obj[i].childNodes[0].href;
+      pageLink = myHref.substring(myHref.lastIndexOf("/")+1, myHref.length);
+       if (thisPage == pageLink)
+       {
+         my_obj[i].childNodes[0].className = "current";
+         // alert(my_obj[i].childNodes[0].className)
+       }
     }
   // }
 }

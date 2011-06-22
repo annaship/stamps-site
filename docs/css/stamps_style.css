@@ -35,6 +35,9 @@
   text-decoration: none; 
 }
 
+.current {
+  color: black !important;  
+}
 
 /* images */
 
