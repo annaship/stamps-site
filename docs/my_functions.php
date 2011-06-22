@@ -31,25 +31,7 @@ function create_link($entry, $my_class="") {
 		}
 		
 	}
-	// echo "res_link = " . $res_link . "<p/>";
 	return $res_link;
 }
-
-// function create_link($entry, $my_class="") {
-// 	global $name_links;
-// 
-// 	// full name and exist in keys
-// 	if (is_string($entry)) {
-// 		if (isset($name_links[$entry])) {
-// 			$res_link = build_link($entry, $name_links[$entry], $my_class);
-// 		}
-// 	}
-// 	// e.g. csv parcing
-// 	else {
-// 		$res_link = split_words($entry, $my_class="");
-// 	}
-// 	return $res_link;
-// }
-
 
 ?>

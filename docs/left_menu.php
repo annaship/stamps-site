@@ -30,9 +30,6 @@
 						echo "<li>" . build_link($name, $comp_facilities_links[$name], "side-link") . "</li>";
 					}
 				?>					
-				<!-- <li><a class="side-link" target="_blank" href="http://jbpc.mbl.edu/computational-resources.html">Computer Resources</a></li> -->
-				<!-- <li><a class="side-link" target="_blank" href="">Account information</a></li> -->
-				<!-- <li>Account information</li> -->
 			</ul>			
 		</div>
 </div>
