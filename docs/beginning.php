@@ -6,8 +6,7 @@
 <!-- <link rel="stylesheet" type="text/css" href="reset-min.css" /> -->
 <link rel="stylesheet" type="text/css" href="/css/grid.css" />
 <link rel="stylesheet" type="text/css" href="/css/stamps_style.css" />
-
-
+<script type="text/javascript" src="/stamps_scripts.js"></script>
 </head>
 
 <body>
