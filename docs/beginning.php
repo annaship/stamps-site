@@ -27,7 +27,7 @@
 		<div class="grid_10 omega" id="main-text">
 			<div class="grid_10" id="nav">
 				<ul>
-					<li><a href="stamps_index.php">Home</a></li>
+					<li><a href="index.php">Home</a></li>
 					<li><a href="stamps_calendar.php">Schedule</a></li>
 				</ul>
 			</div>
