@@ -12,7 +12,7 @@
 											David Mark Welch</a> -->
 				<ul>
 					<!-- <li><a class="side-link" target="_blank" href="http://jbpc.mbl.edu/labs-msogin.html">Mitchell Sogin</a></li> -->
-					<li><?echo add_link("Mitchell Sogin", "side-link")?></li>
+					<li><?echo create_link("Mitchell Sogin", "side-link")?></li>
 					<li><a class="side-link" target="_blank" href="http://jbpc.mbl.edu/labs-dmarkwelch.html">David Mark Welch</a></li>
 					<li><a class="side-link" target="_blank" href="http://esd.lbl.gov/ESD_staff/andersen/index.html">Gary Anderson</a></li>
 					<li><a class="side-link" target="_blank" href="http://www.stat.cornell.edu/~bunge/">John Bunge</a></li>
