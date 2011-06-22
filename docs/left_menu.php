@@ -13,22 +13,22 @@
 				<ul>
 					<!-- <li><a class="side-link" target="_blank" href="http://jbpc.mbl.edu/labs-msogin.html">Mitchell Sogin</a></li> -->
 					<li><?echo create_link("Mitchell Sogin", "side-link")?></li>
-					<li><a class="side-link" target="_blank" href="http://jbpc.mbl.edu/labs-dmarkwelch.html">David Mark Welch</a></li>
-					<li><a class="side-link" target="_blank" href="http://esd.lbl.gov/ESD_staff/andersen/index.html">Gary Anderson</a></li>
-					<li><a class="side-link" target="_blank" href="http://www.stat.cornell.edu/~bunge/">John Bunge</a></li>
-					<li><a class="side-link" target="_blank" href="http://rdp.cme.msu.edu/index.jsp">James Cole</a></li>
-					<li><a class="side-link" target="_blank" href="http://www.drive5.com/more.html">Robert Edgar</a></li>
-					<li><a class="side-link" target="_blank" href="http://fuhrmanlab.usc.edu/">Jed Fuhrman</a></li>
-					<li><a class="side-link" target="_blank" href="http://jbpc.mbl.edu/labs-shuse.html">Susan Huse</a></li>
-					<li><a class="side-link" target="_blank" href="http://chem.colorado.edu/index.php?option=com_content&view=article&id=263:rob-knight&catid=41:faculty&Itemid=93">Rob Knight</a></li>
-					<li><a class="side-link" target="_blank" href="http://bioinf.mpi-inf.mpg.de/homepage/index.php?&account=mchardy ">Alice McHardy</a></li>
-					<li><a class="side-link" target="_blank" href="http://jbpc.mbl.edu/labs-hmorrison.html">Hilary Morrison</a></li>
-					<li><a class="side-link" target="_blank" href="http://www.mpi-bremen.de/en/Elmar_Pruesse.html">Elmer Prüße</a></li>
-					<li><a class="side-link" target="_blank" href="http://userweb.eng.gla.ac.uk/christopher.quince/">Chris Quince</a></li>
-					<li><a class="side-link" target="_blank" href="http://people.vanderbilt.edu/~antonis.rokas/index.html">Antonis Rokas</a></li>
-					<li><a class="side-link" target="_blank" href="http://www.med.umich.edu/microbio/bio/schloss.htm">Patrick Schloss</a></li>
-					<li><a class="side-link" target="_blank" href="http://plaza.ufl.edu/sunyijun/">Yijun Sun</a></li>
-					<li><a class="side-link" target="_blank" href="http://turnbaugh.openwetware.org/">Peter Turnbaugh</a></li>
+					<li><?echo create_link("David Mark Welch", "side-link")?></li>
+					<li><?echo create_link("Gary Anderson", "side-link")?></li>
+					<li><?echo create_link("John Bunge", "side-link")?></li>
+					<li><?echo create_link("James Cole", "side-link")?></li>
+					<li><?echo create_link("Robert Edgar", "side-link")?></li>
+					<li><?echo create_link("Jed Fuhrman", "side-link")?></li>
+					<li><?echo create_link("Susan Huse", "side-link")?></li>
+					<li><?echo create_link("Rob Knight", "side-link")?></li>
+					<li><?echo create_link("Alice McHardy", "side-link")?></li>
+					<li><?echo create_link("Hilary Morrison", "side-link")?></li>
+					<li><?echo create_link("Elmer Prüße", "side-link")?></li>
+					<li><?echo create_link("Chris Quince", "side-link")?></li>
+					<li><?echo create_link("Antonis Rokas", "side-link")?></li>
+					<li><?echo create_link("Patrick Schloss", "side-link")?></li>
+					<li><?echo create_link("Yijun Sun", "side-link")?></li>
+					<li><?echo create_link("Peter Turnbaugh", "side-link")?></li>
 				</ul>
 			</div>
 		<div class="side-title">Tools
