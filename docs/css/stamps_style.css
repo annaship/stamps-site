@@ -130,9 +130,8 @@ table#res_table
   font-weight: bold;
 }
 
-.home-text {
-  padding-left: 20px;
-  padding-right: 20px;
+#home-text {
+  text-align: justify;
 }
 
 
