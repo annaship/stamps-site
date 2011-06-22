@@ -11,7 +11,7 @@
 
 <body>
 	<div class="container_12">
-		<div class="grid_12">
+		<div class="grid_12 alpha omega">
 			<a href="index.php">
 				<img class="header_top" src="/images/stamps_header_top.jpg" alt="STAMPS Header - Top">
 				<img class="header_bottom" src="/images/jbpc_header_bottom6.jpg" alt="STAMPS Header - Bottom">

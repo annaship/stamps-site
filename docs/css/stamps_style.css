@@ -111,19 +111,6 @@ table#res_table
 
 /* left-menu */
 
-#sidebar {
-/* display: block;
-  background: url(images/menu_bg.gif) no-repeat;*/
-/*  vertical-align: middle;
-  font-size: 12px;
-  font-weight: normal;
-  color: white;
-  text-align: left;
-*//*  padding-top: 2px;*/
-/* padding-left: 20px;*/
-/* height: auto;*/
-}
-
 #sidebar ul
 {
   list-style-image: url('/images/dot.gif');
@@ -150,6 +137,8 @@ table#res_table
 }
 
 #home-text {
+  padding: 0px;
+  margin: 0px;
   text-align: justify;
 }
 
