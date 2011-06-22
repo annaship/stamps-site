@@ -1,12 +1,4 @@
-#res_table {
-  margin-top: 10px;
-}
-
 /* navigation */
-
-#right-part {
-  text-align: center;
-}
 
 #nav {
   text-align: right;
@@ -27,16 +19,13 @@
 #nav li a {
   color: gray;
   padding: 5px; 
-/*  padding-right: 10px;*/
   text-decoration: none; 
 }
 
 #nav a:hover {
 /*  color: #e15733;*/
   color: black;
-  padding: 5px; 
   background-color: #afae6b;
-  text-decoration: none; 
 }
 
 .current {
@@ -72,16 +61,17 @@
 
 .stamps-logo {
   width: 120%;
-/*  vertical-align: middle;*/
   padding-top: 20px; 
   padding-left: 20px;
 }
 
 /* table */
+
 table#res_table
 {
   border-collapse: collapse;
   empty-cells: show; 
+  margin-top: 10px;
 }
 
 #res_table table, th, td
@@ -90,7 +80,7 @@ table#res_table
   padding: 0.5em;
 }
 
-/* colored cells */
+/* colored cells, not used for now */
 
 .dark_grey {
   background: #9f9f9f;
@@ -125,7 +115,6 @@ table#res_table
   background-color: #395D8D;
 }
 
-
 .side-title {
   color: #395D8D;
   text-transform: uppercase;
@@ -135,13 +124,6 @@ table#res_table
   padding-left: 10px;
   font-weight: bold;
 }
-
-#home-text {
-  padding: 0px;
-  margin: 0px;
-  text-align: justify;
-}
-
 
 a.side-link {
   color: #E0E0E0;
@@ -157,10 +139,15 @@ a:hover.side-link {
   text-decoration: none; 
 }
 
-#nav a:hover {
-/*  color: #e15733;*/
-  color: black;
-  background-color: #afae6b;
-  font-size: 16px;
-  text-decoration: none; 
+/* other */
+
+#home-text {
+  padding: 0px;
+  margin: 0px;
+  text-align: justify;
 }
+
+#right-part {
+  text-align: center;
+}
+

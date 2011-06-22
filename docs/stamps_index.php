@@ -23,7 +23,6 @@
 				</p><p>
 				The course is designed for established investigators, postdoctoral fellows and advanced graduate students from diverse biological fields. The Workshop Participants will also be given priority for acceptance into the MBL’s Workshop in Molecular Evolution that will meet the preceding week. This option will provide an opportunity to develop a stronger conceptual framework for understanding the basis of analytical tools in the STAMPS workshop.
 				</p>
-		<!-- </div> -->
 <?php
 	include("end.php");
 ?>

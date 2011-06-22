@@ -3,7 +3,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<!-- <link rel="stylesheet" type="text/css" href="reset-min.css" /> -->
 <link rel="stylesheet" type="text/css" href="/css/grid.css" />
 <link rel="stylesheet" type="text/css" href="/css/stamps_style.css" />
 <script type="text/javascript" src="/stamps_scripts.js"></script>
@@ -31,6 +30,3 @@
 				</ul>
 			</div>
 			<div class="clear">&nbsp;</div>
-
-<!-- 		ul.a {list-style-type: circle;}
- -->

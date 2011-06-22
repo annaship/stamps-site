@@ -1,6 +1,6 @@
 template is from http://www.456bereastreet.com/lab/developing_with_web_standards/csslayout/2-col/
 
-color on a:cover
+	color on a:cover
 	table w links 
 table w colors
 	banner w Stamps text
@@ -8,9 +8,9 @@ table w colors
 	logo - change background
 esprit and other links to tools
 	navigation: home, schedule,
-navigation: padding bottom
+	navigation: padding bottom
 navigation: buttons
-yellow letters on left menu when choosen
+	yellow letters on left menu when choosen
 
 create alias on server for
 cp  beginning.php /usr/local/www/stamps/docs; cp -r css /usr/local/www/stamps/docs; cp  end.php /usr/local/www/stamps/docs; cp -r images /usr/local/www/stamps/docs; cp stamps_index.php /usr/local/www/stamps/docs/index.php; cp  left_menu.php /usr/local/www/stamps/docs; cp  my_arrays.php /usr/local/www/stamps/docs; cp  my_functions.php /usr/local/www/stamps/docs; cp  stamps_calendar.php /usr/local/www/stamps/docs;
