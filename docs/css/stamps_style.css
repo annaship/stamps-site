@@ -141,3 +141,11 @@ a.side-link {
   text-decoration: none; 
 }
 
+a:hover.side-link {
+/*  color: #e15733;*/
+  color: black;
+  background-color: #afae6b;
+  font-size: 16px;
+  text-decoration: none; 
+}
+
