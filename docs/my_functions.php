@@ -25,7 +25,7 @@ function add_link($entry) {
 		if ($full_name) {
 			// echo "full_name _".$full_name."_<p/>";
 			$link = $name_links[$full_name];	
-			$new_entry .= "<a href=\"".$link."\">".$word."</a>";
+			$new_entry .= "<a target=\"_blank\" href=\"".$link."\">".$word."</a>";
 		}
 		else {
 			$new_entry .= $word." ";	

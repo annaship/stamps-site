@@ -7,11 +7,12 @@
 	<div class="grid_8 omega" id="right-part">
 					<h2>August 3 – August 13, 2011</h2>
 				
-					<p>Course directors <a href="http://jbpc.mbl.edu/labs-msogin.html">Mitchell Sogin</a> and <a href=" http://jbpc.mbl.edu/labs-dmarkwelch.html">David Mark Welch</a></p>
+					<p>Course directors <a target="_blank" href="http://jbpc.mbl.edu/labs-msogin.html">Mitchell Sogin</a> and <a target="_blank" href=" http://jbpc.mbl.edu/labs-dmarkwelch.html">David Mark Welch</a></p>
 					
-					<p><a href="stamps_calendar.php"> Schedule</a></br> 
-						 Information for students </br> 
-						 Information for faculty
+					<p><a href="stamps_calendar.php"> Schedule</a>
+						<!-- </br>  -->
+						 <!-- Information for students </br> 
+						 Information for faculty -->
 					</p>	
 	</div>
 				<div class="clear">&nbsp;</div>
