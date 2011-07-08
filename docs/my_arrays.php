@@ -11,7 +11,7 @@ $name_links = array(
 	"Rob Knight" 			=> "http://chem.colorado.edu/index.php?option=com_content&view=article&id=263:rob-knight&catid=41:faculty&Itemid=93",
 	"Alice McHardy" 	=> "http://bioinf.mpi-inf.mpg.de/homepage/index.php?&account=mchardy",
 	"Hilary Morrison" => "http://jbpc.mbl.edu/labs-hmorrison.html",
-	"Elmer Prüße" 		=> "http://www.mpi-bremen.de/en/Elmar_Pruesse.html",
+	"Elmar Prüße" 		=> "http://www.mpi-bremen.de/en/Elmar_Pruesse.html",
 	"Chris Quince" 		=> "http://userweb.eng.gla.ac.uk/christopher.quince/",
 	"Antonis Rokas" 	=> "http://people.vanderbilt.edu/~antonis.rokas/index.html",
 	"Patrick Schloss" => "http://www.med.umich.edu/microbio/bio/schloss.htm",
