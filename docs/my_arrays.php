@@ -16,22 +16,23 @@ $name_links = array(
 	"Antonis Rokas" 	=> "http://people.vanderbilt.edu/~antonis.rokas/index.html",
 	"Patrick Schloss" => "http://www.med.umich.edu/microbio/bio/schloss.htm",
 	"Yijun Sun" 			=> "http://plaza.ufl.edu/sunyijun/",
-	"Peter Turnbaugh" => "http://turnbaugh.openwetware.org/"
+	"Peter Turnbaugh" => "http://turnbaugh.openwetware.org/",
+	"Folker Meyer"		=> "http://www.mcs.anl.gov/~folker/"
 );
 
 $tool_links = array(
-	"Ampliconnoise"		=> "http://code.google.com/p/ampliconnoise/",
+	"AmpliconNoise"		=> "http://code.google.com/p/ampliconnoise/",
 	"ARB"							=> "http://www.arb-home.de/",
-	"CatchAll"				=> "",
+	"catchall"				=> "http://www.stat.cornell.edu/~bunge/research.html",
 	"ESPRIT"					=> "http://plaza.ufl.edu/sunyijun/ESPRIT.htm",
-	"Mothur"					=> "http://www.mothur.org/wiki/Main_Page",
-	"MGRAST"					=> "http://metagenomics.anl.gov/",
+	"mothur"					=> "http://www.mothur.org/wiki/Main_Page",
+	"MG-RAST"					=> "http://metagenomics.anl.gov/",
 	"PhyloPythia"			=> "",
 	"QIIME"						=> "http://qiime.sourceforge.net/",
 	"RDP"							=> "http://rdp.cme.msu.edu/",
-	"Silva"						=> "http://www.arb-silva.de/",
-	"UClust"					=> "http://www.drive5.com/usearch/",
-	"Unifrac"					=> "http://bmf2.colorado.edu/unifrac/",
+	"SILVA"						=> "http://www.arb-silva.de/",
+	"USearch (UClust, UChime)" => "http://www.drive5.com/usearch/",
+	"UniFrac"					=> "http://bmf2.colorado.edu/unifrac/",
 	"VAMPS"						=> "http://vamps.mbl.edu/"
 );
 
