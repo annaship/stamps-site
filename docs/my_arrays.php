@@ -6,7 +6,7 @@ $name_links = array(
 	"John Bunge" 			=> "http://www.stat.cornell.edu/~bunge/",
 	"James Cole" 			=> "http://rdp.cme.msu.edu/index.jsp",
 	"Robert Edgar" 		=> "http://www.drive5.com/more.html",
-	"Jed Fuhrman" 		=> "http://fuhrmanlab.usc.edu/",
+	"Jed Fuhrman" 		=> "http://dornsife.usc.edu/cf/faculty-and-staff/faculty.cfm?pid=1003269&CFID=2355143&CFTOKEN=68823910",
 	"Susan Huse" 			=> "http://jbpc.mbl.edu/labs-shuse.html",
 	"Rob Knight" 			=> "http://chem.colorado.edu/index.php?option=com_content&view=article&id=263:rob-knight&catid=41:faculty&Itemid=93",
 	"Alice McHardy" 	=> "http://bioinf.mpi-inf.mpg.de/homepage/index.php?&account=mchardy",
