@@ -17,6 +17,9 @@
 	$results = $xml->results;
 	
 	echo "<table id='res_table'>";
+	
+	echo '<tr><th id="first_line" colspan="12">Welcoming Reception Wednesday, Aug 3, 7:00pm - 9:00pm, Meigs Room,
+	Swope Building</th></tr>';
 	foreach ($results -> row as $row) {
 		echo "<tr>";
 		foreach ($row as $col_n => $col) {

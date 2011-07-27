@@ -17,7 +17,8 @@ $name_links = array(
 	"Patrick Schloss" => "http://www.med.umich.edu/microbio/bio/schloss.htm",
 	"Yijun Sun" 			=> "http://plaza.ufl.edu/sunyijun/",
 	"Peter Turnbaugh" => "http://turnbaugh.openwetware.org/",
-	"Folker Meyer"		=> "http://www.mcs.anl.gov/~folker/"
+	"Folker Meyer"		=> "http://www.mcs.anl.gov/~folker/",
+	"Sheri Simmons"		=> "http://www.simmonslab.org/"
 );
 
 $tool_links = array(

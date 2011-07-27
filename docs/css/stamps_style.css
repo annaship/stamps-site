@@ -80,6 +80,16 @@ table#res_table
   padding: 0.5em;
 }
 
+#first_line
+{
+  border-bottom-width: 0px; 
+  border-top-width: 0px; 
+  border-right-width: 0px;
+  border-left-width: 0px;
+  font-size: 130%;
+  text-align: left;
+}
+
 /* colored cells, not used for now */
 
 .dark_grey {
