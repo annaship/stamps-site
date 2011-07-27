@@ -78,6 +78,7 @@ table#res_table
 {
   border: 1px solid;
   padding: 0.5em;
+  vertical-align: text-top;
 }
 
 #first_line
