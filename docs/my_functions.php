@@ -21,7 +21,7 @@ function create_link($entry, $my_class="") {
 	$words = preg_split("/[\s]+/", $entry);
 	$res_link = "";
 	foreach ($words as $word) {
-		$full_name = search_array(array_keys($name_links), $word);
+		$full_name = search_array(array_keys($name_links), "\b".$word."\b");
 		if ($full_name) {
 			$link = $name_links[$full_name];	
 			$res_link .= build_link($word, $link, $my_class="");
