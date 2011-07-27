@@ -13,7 +13,7 @@ function search_array($array, $search) {
 }
 
 function build_link($words, $link, $my_class="") {
-	return "<a class = \"" . $my_class . "\" target=\"_blank\" href=\"" . $link . "\">" . $words . "</a>";
+	return "<a class = \"" . $my_class . "\" target=\"_blank\" href=\"" . $link . "\">" . $words . "</a> ";
 }
 
 function create_link($entry, $my_class="") {
