@@ -21,15 +21,17 @@ function create_link($entry, $my_class="") {
 	$words = preg_split("/[\s]+/", $entry);
 	$res_link = "";
 	foreach ($words as $word) {
-		$full_name = search_array(array_keys($name_links), "\b".$word."\b");
-		if ($full_name) {
-			$link = $name_links[$full_name];	
-			$res_link .= build_link($word, $link, $my_class="");
+		$string = preg_replace('/[:,-]/','',$word);
+		if (strlen($word) > 1) {
+			$full_name = search_array(array_keys($name_links), "\b".$string."\b");	
+			if ($full_name) {
+				$link = $name_links[$full_name];	
+				$res_link .= build_link($word, $link, $my_class="");
+			}
+			else {
+				$res_link .= $word." ";	
+			}
 		}
-		else {
-			$res_link .= $word." ";	
-		}
-		
 	}
 	return $res_link;
 }
