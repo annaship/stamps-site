@@ -11,14 +11,14 @@ $name_links = array(
 	"Rob Knight" 			=> "http://chem.colorado.edu/index.php?option=com_content&view=article&id=263:rob-knight&catid=41:faculty&Itemid=93",
 	"Alice McHardy" 	=> "http://bioinf.mpi-inf.mpg.de/homepage/index.php?&account=mchardy",
 	"Hilary Morrison" => "http://jbpc.mbl.edu/labs-hmorrison.html",
-	"Elmar Prüße" 		=> "http://www.mpi-bremen.de/en/Elmar_Pruesse.html",
 	"Chris Quince" 		=> "http://userweb.eng.gla.ac.uk/christopher.quince/",
 	"Antonis Rokas" 	=> "http://as.vanderbilt.edu/rokaslab/",
 	"Patrick Schloss" => "http://www.med.umich.edu/microbio/bio/schloss.htm",
 	"Yijun Sun" 			=> "http://plaza.ufl.edu/sunyijun/",
 	"Peter Turnbaugh" => "http://turnbaugh.openwetware.org/",
 	"Folker Meyer"		=> "http://www.mcs.anl.gov/~folker/",
-	"Sheri Simmons"		=> "http://www.simmonslab.org/"
+	"Sheri Simmons"		=> "http://www.simmonslab.org/",
+	"Amy Apprill"		=> "http://www.whoi.edu/profile.do?id=aapprill"
 );
 
 $tool_links = array(
