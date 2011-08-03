@@ -38,6 +38,8 @@
 					echo "<td class = 'time'>$res</td>";
 			elseif ($tr_n == 5 || $tr_n == 11)
 				echo "<td class = 'rest'>$res</td>";
+			elseif (preg_match('/Lobster Boil/', $res))
+				echo "<td class = 'meal'>$res</td>";				
 			else
 				echo "<td>$res</td>";
 		}
