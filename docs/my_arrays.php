@@ -18,7 +18,7 @@ $name_links = array(
 	"Peter Turnbaugh" => "http://turnbaugh.openwetware.org/",
 	"Folker Meyer"		=> "http://www.mcs.anl.gov/~folker/",
 	"Sheri Simmons"		=> "http://www.simmonslab.org/",
-	"Amy Apprill"		=> "http://www.whoi.edu/profile.do?id=aapprill"
+	"Amy Apprill"	  	=> "http://www.whoi.edu/profile.do?id=aapprill"
 );
 
 $tool_links = array(

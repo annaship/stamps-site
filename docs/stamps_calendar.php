@@ -20,8 +20,15 @@
 	
 	echo '<tr><th id="first_line" colspan="12">Welcoming Reception Wednesday, Aug 3, 7:00pm &ndash; 9:00pm, Meigs Room,
 	Swope Building</th></tr>';
+	$n = 0;
 	foreach ($results -> row as $row) {
-		echo "<tr>";
+		$n += 1;
+		if ($n == 1 || $n == 2)
+			echo "<tr class='data'>";
+		elseif ($n == 5 || $n == 8)
+			echo "<tr class='meal'>";
+		else
+			echo "<tr>";			
 		foreach ($row as $col_n => $col) {
 			$res = create_link($col);
 			echo "<td>$res</td>";

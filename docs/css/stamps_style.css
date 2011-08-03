@@ -69,9 +69,10 @@
 
 table#res_table
 {
-  border-collapse: collapse;
+/*  border-collapse: collapse;*/
   empty-cells: show; 
   margin-top: 10px;
+  text-align: center;
 }
 
 #res_table table, th, td
@@ -90,6 +91,17 @@ table#res_table
   font-size: 130%;
   text-align: left;
 }
+
+.meal {
+  background: gold;
+}
+
+.data {
+  background: teal;
+  color: white;
+}
+
+
 
 /* colored cells, not used for now */
 
