@@ -7,17 +7,7 @@
 	<div class="grid_8 omega" id="right-part">
 					<h2>August 3 – August 13, 2011</h2>
 				
-					<p>Course directors 
-						<? 
-							$full_name = "Mitchell Sogin";
-							echo build_link($full_name, $name_links[$full_name]);
-						?>
-						and 
-						<? 
-							$full_name = "David Mark Welch";
-							echo build_link($full_name, $name_links[$full_name]);
-						?>						
-						</p>
+					<p>Course directors <a target="_blank" href="http://jbpc.mbl.edu/labs-msogin.html">Mitchell Sogin</a> and <a target="_blank" href=" http://jbpc.mbl.edu/labs-dmarkwelch.html">David Mark Welch</a></p>
 					
 					<p><a href="stamps_calendar.php"> Schedule</a>
 						<!-- </br>  -->
