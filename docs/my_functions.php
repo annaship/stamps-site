@@ -36,4 +36,24 @@ function create_link($entry, $my_class="") {
 	return $res_link;
 }
 
+// function print_tr($n) {
+// 	if ($n == 1 || $n == 2)
+// 		return "<tr class = 'data'>";
+// 	elseif ($n == 5 || $n == 8)
+// 		return "<tr class = 'meal'>";
+// 	else
+// 		return "<tr>";			
+// }
+// 
+// function print_td($tr_n, $res) {
+// 	if ($tr_n == 1)
+// 		return "<td class = 'time'>$res</td>";
+// 	elseif ($tr_n == 5 || $tr_n == 11)
+// 		return "<td class = 'rest'>$res</td>";
+// 	elseif (preg_match('/Lobster Boil/', $res))
+// 		return "<td class = 'meal'>$res</td>";				
+// 	else
+// 		return "<td>$res</td>";
+// }
+
 ?>
