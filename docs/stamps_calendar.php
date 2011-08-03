@@ -23,15 +23,23 @@
 	$n = 0;
 	foreach ($results -> row as $row) {
 		$n += 1;
+		$tr_n = 0;
 		if ($n == 1 || $n == 2)
-			echo "<tr class='data'>";
+			echo "<tr class = 'data'>";
 		elseif ($n == 5 || $n == 8)
-			echo "<tr class='meal'>";
+			echo "<tr class = 'meal'>";
 		else
 			echo "<tr>";			
 		foreach ($row as $col_n => $col) {
-			$res = create_link($col);
-			echo "<td>$res</td>";
+			$res  = create_link($col);
+			$tr_n += 1;
+			 
+			if ($tr_n == 1)
+					echo "<td class = 'time'>$res</td>";
+			elseif ($tr_n == 5 || $tr_n == 11)
+				echo "<td class = 'rest'>$res</td>";
+			else
+				echo "<td>$res</td>";
 		}
 		echo "</tr>";
 	}

@@ -101,7 +101,15 @@ table#res_table
   color: white;
 }
 
+.time {
+  background: teal;
+  color: white;
+}
 
+.rest {
+  background: #e3e9ff;
+  color: black;
+}
 
 /* colored cells, not used for now */
 
